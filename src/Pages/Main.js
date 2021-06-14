@@ -22,17 +22,16 @@ const Main = () => {
         <>
         <h1>this is the Main PAGE</h1>
         <ContentContainer>
-            <p>Audience</p>
+            <p>/:audience</p>
         </ContentContainer>
 
-        {/* <ContentContainer> */}
-            {/* {/:audience/:category} */}
-        {/* </ContentContainer> */}
+        <ContentContainer>
+            <p>/:audience/:category</p>
+        </ContentContainer>
 
-        {/* <ContentContainer> */}
-            {/* {/:audience/:category/:group} */}
-        {/* </ContentContainer> */}
-
+        <ContentContainer>
+        <p>/:audience/:category/:group</p>
+        </ContentContainer>
         </>
     )
 }
