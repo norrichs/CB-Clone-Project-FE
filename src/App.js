@@ -1,37 +1,41 @@
 
 import './App.css';
-import BottomNav from './Componets/BottomNav';
-import ChatButton from './Componets/ChatButton';
-import ContentContainer from './Componets/ContentContainer';
-import ExpandableHeader from './Componets/ExpandableHeader';
-import FilterAndSortModal from './Componets/FilterAndSortModal';
-import Header from './Componets/Header';
-import ProductCard from './Componets/ProductCard';
-import ProductCardFavorite from './Componets/ProductCardFavorite';
-import ReturnToTopButton from './Componets/ReturnToTopButton';
-import ShowingSticky from './Componets/ShowingSticky';
-import SideBarNav from './Componets/SideBarNav';
-import SignInModal from './Componets/SignInModal';
-import StikyFilterHeader from './Componets/StickyFilterHeader.jsHamburgerDropdown';
+import { Router, Link, Switch } from 'react-router-dom';
+
+
+/////////////// COMPONENTS BELOW /////////////////////
+import Header from './Components/Header';
+import ExpandableHeader from './Components/ExpandableHeader';
+import BottomNav from './Components/BottomNav';
+
+
+/////////////// PAGES BELOW /////////////////////
+import Main from './Pages/Main';
+import Splash from './Pages/Splash';
+import Bag from './Pages/Bag';
+
+
+
 
 
 
 function App() {
+
   return (
     <div className="App">
-     <BottomNav/>
-     <ChatButton/>
-     <ContentContainer/>
-     <ExpandableHeader/>
-     <FilterAndSortModal/>
-     <Header/>
-     <ProductCard/>
-     <ProductCardFavorite/>
-     <ReturnToTopButton/>
-     <ShowingSticky/>
-     <SideBarNav/>
-     <SignInModal/>
-     <StikyFilterHeader/>
+      {/* <Switch> */}
+        <Header/>
+        <ExpandableHeader/>
+        <Splash/>
+        
+        
+        <Main/>
+        <Main/>
+        <Main/>
+        
+        <BottomNav/>
+        <Bag/>
+        {/* </Switch> */}
     </div>
   );
 }
