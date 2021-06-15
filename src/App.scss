@@ -1,0 +1,100 @@
+$logo : #E40011;
+$mainWhite : #FAF9F8;
+$callBlue : #25417A;
+$callCream : #F1EBDF;
+$callGrey : #CEC6BA;
+$favWhite : #FAF9F8;
+$favRed : #E40011;
+$buttonBlack : #222222;
+$buttonWhite : #FFFFFF;
+$imgBackground : #E4E3E1;
+$chat : #222222;
+$bottomNav : #E4E4E4;
+
+
+body {
+    margin: 0px;
+}
+
+// #root {
+//     margin: 0px;
+//     background: rgb(95, 243, 213);
+//     // box-sizing: border-box; 
+// }
+
+
+
+/////////////////////////////////////////////////////////////
+         ////////////// PRODUCT CARD //////////
+/////////////////////////////////////////////////////////////
+.card-container {
+    // box-sizing: border-box;
+    // border: 2px solid rgb(165, 243, 123);
+    height: 370px;
+    width: 200px;
+    // background: #FAF9F8;
+    background: #FAF9F8;
+
+    .card-image-container {
+        // box-sizing: border-box;
+        // border: 2px solid red;
+        height: 300px;
+        width: 200px ;
+        
+        // overflow: hidden;
+        // background-image: contain;
+        // object-fit: cover;
+    }
+    .card-image {
+        box-sizing: border-box;
+        // border: 2px solid blue;
+        // transform: scale(.7);
+        // object-fit: cover;
+        width: 100%;
+        }
+    
+    #card-favorite-white {
+        // border: 2px solid red;
+        margin-right: 5px;
+        width: 20px;
+        position: relative;
+        bottom: 95px;
+        left: 175px;
+        display: flex;
+        justify-content: center;
+        transform: scale(1.2);
+        color: $mainWhite; 
+        &:hover {
+            color: red; 
+        }
+    }
+    #card-info {
+        // border: 2px solid red;
+        margin: 15px 0 0 0;
+        #card-product-name article{
+            // border: 2px solid red;
+            // color: red;
+            margin: 0px;
+            font-size: .8em; 
+            margin-top: 3px;
+        }
+     #card-circles-container {
+        //  border: 2px solid red;
+         width: 50%;
+         margin-top: 5px;
+        #card-circles-1 {
+            // border: 2px solid red;
+            transform: scale(.1);
+            color:lightgrey;
+        }
+        #card-circles-2 {
+            color: lightgrey;
+        }
+        #card-circles-3 {
+            color: lightgrey;
+        }
+     }
+    }
+}
+
+
