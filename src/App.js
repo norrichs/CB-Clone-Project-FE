@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
+// import './App.scss';
+// import '../src/styles/App.scss'
 import { Route, Link, Switch } from 'react-router-dom';
 
 
@@ -23,16 +25,37 @@ import Favorites from './Pages/Favorites'
 // to set the user state of the page
 
 function App() {
-  const url = ('https://ccexp5wwrk.execute-api.us-east-2.amazonaws.com/dev')
-  const [product, setProduct] = React.useState([])
-
-//////////// CRUD FUNCTIONS HERE ///////////////
+  const url = ('https://ccexp5wwrk.execute-api.us-east-2.amazonaws.com/dev/product/men/suits-blazers/suits')
+  const [audience, setAudience] = React.useState([]);
+  const [category, setCategory] = React.useState([]);
+  const [group, setGroup] = React.useState([]);
+  const [bag, setBag] = React.useState([])
+  
+  
+////////// CRUD FUNCTIONS HERE ///////////////
 // const getProduct = () => {
 //   fetch(url)
 //   .then( (response) => response.json() )
 //   .then((data) => setProduct(data.body))
 //   console.log(url)
 // }
+const getAudience = async () => {
+  const response = await fetch(url + '/')
+  console.log(response) 
+  const data = await response.json()
+  console.log('this is the data', data)
+  setAudience(data)
+}
+
+const getCategory = async () => {
+  const response = await fetch(url + '/:')
+  console.log(response) 
+  const data = await response.json()
+  console.log('this is the data', data)
+  setCategory(data)
+}
+
+
 
   return (
     <div className="App">
@@ -45,7 +68,7 @@ function App() {
         />} />
 
         <Route exact path="/:audience" 
-        render={(routerProps) => <Main {...routerProps} 
+        render={(routerProps) => <Main {...routerProps}
         />}/>
 
         <Route exact path="/:audience/:category" 
