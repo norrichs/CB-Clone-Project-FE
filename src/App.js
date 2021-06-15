@@ -59,36 +59,36 @@ const getCategory = async () => {
 
   return (
     <div className="App">
-      {/* <Switch> */}
-        {/* may not need the routerProps in the the render prop */}
         <Header/>
         <ExpandableHeader/>
-        <Route exact path="/" 
-        render={(routerProps) => <Splash {...routerProps}
-        />} />
+      <Switch>
+        {/* may not need the routerProps in the the render prop */}
+        <Route exact path="/">
+          <Splash
+          />
+        </Route>
+        <Route exact path="/:audience">
+          <Main
+            url={url}
+          />
+        </Route>
+        <Route exact path="/:audience/:category">
+          <Main/>
+        </Route>
 
-        <Route exact path="/:audience" 
-        render={(routerProps) => <Main {...routerProps}
-        />}/>
+        <Route exact path="/:audience/:category/:group">
+          <Main/>
+        </Route>
 
-        <Route exact path="/:audience/:category" 
-        render={(routerProps) => <Main {...routerProps}
-        />}/>
+        <Route exact path="/bag">
+          <Bag/>
+        </Route>
         
-        <Route exact path="/:audience/:category/:group" 
-        render={(routerProps) => <Main {...routerProps} 
-        />}/>
-
-        <Route exact path="/bag" 
-        render={(routerProps) => <Bag {...routerProps}
-        />} />
-        
-        <Route exact path="/favorites" 
-        render={(routerProps) => <Favorites {...routerProps}
-        />} />
-
+        <Route exact path="/favorites">
+          <Favorites/>
+        </Route>
+      </Switch>
         <BottomNav/>
-      {/* </Switch> */}
     </div>
   );
 }

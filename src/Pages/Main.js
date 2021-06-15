@@ -1,4 +1,17 @@
 import react from 'react'
+import { useParams } from 'react-router';
+import {link} from 'react-router-dom'
+    //  {/* <ChatButton/> */}
+    //  {/* <FilterAndSortModal/> */}
+    //  {/* <ProductCard/> */}
+    //  {/* <ProductCardFavorite/> */}
+    //  {/* <ReturnToTopButton/> */}
+    //  {/* <ShowingSticky/> */}
+    //  {/* <SideBarNav/> */}
+    //  {/* <SignInModal/> */}
+    //  {/* <StikyFilterHeader/> */}
+
+
 
 import ContentContainer from '../Components/ContentContainer'
 
@@ -15,9 +28,25 @@ import ContentContainer from '../Components/ContentContainer'
 
 
 
+// console.log('test');
+
+const Main = ({url}, props) => {
+    // console.log('this is the props', props)
+    // console.log(url)
+    console.log('this is the useParams', useParams());
+    const {audence, category, group } = useParams()
+
+    const getProduct = () => {
+        fetch(url + 'audience')
+        .then((res) => res.json())
+        .then((data) => {
+            console.log("received user data", data.data);
+        })
+    }
+    
 
 
-const Main = () => {
+    
     return (
         <>
         <h1>this is the Main PAGE</h1>
@@ -35,17 +64,5 @@ const Main = () => {
         </>
     )
 }
-
+// Main()
 export default Main
-
-
-
-    //  {/* <ChatButton/> */}
-    //  {/* <FilterAndSortModal/> */}
-    //  {/* <ProductCard/> */}
-    //  {/* <ProductCardFavorite/> */}
-    //  {/* <ReturnToTopButton/> */}
-    //  {/* <ShowingSticky/> */}
-    //  {/* <SideBarNav/> */}
-    //  {/* <SignInModal/> */}
-    //  {/* <StikyFilterHeader/> */}
