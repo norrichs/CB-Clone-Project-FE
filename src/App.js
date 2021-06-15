@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import './App.css';
-// import './App.scss';
+// import './App.css';
+import './App.scss';
 // import '../src/styles/App.scss'
 import { Route, Link, Switch } from 'react-router-dom';
 
@@ -88,7 +88,7 @@ const getCategory = async () => {
           <Favorites/>
         </Route>
       </Switch>
-        <BottomNav/>
+        {/* <BottomNav/> */}
     </div>
   );
 }
