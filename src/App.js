@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
+import './styles/App.scss'
+
 // import './App.scss';
 // import '../src/styles/App.scss'
 import { Route, Link, Switch } from 'react-router-dom';
