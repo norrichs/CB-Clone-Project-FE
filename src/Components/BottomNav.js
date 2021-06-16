@@ -130,11 +130,12 @@ return (
 
     <div id="footer-lower-section-container">
         <div id="footer-lower-section-icons">
-            <AiFillFacebook/>
-            <AiOutlineTwitter/>
-            <AiOutlineInstagram/>
-            <AiFillYoutube/>
-            <ImPinterest/>
+            {/* these icons below are just placehoder for now... links dont work */}
+            <a href="https://www.facebook.com/hmtheus" target="blank" alt="facebook logo" ><AiFillFacebook/></a> 
+            <a href="https://twitter.com/hmusa" target="blank" alt="twitter logo"><AiOutlineTwitter/></a>
+            <a href="https://www.instagram.com/hm/" target="blank" alt="instagram logo"><AiOutlineInstagram/></a>
+            <a href="http://www.youtube.com/user/hennesandmauritz" target="blank" alt="youtube logo"><AiFillYoutube/></a>
+            <a href="https://www.pinterest.com/hm/" target="blank" alt="pintrest logo"><ImPinterest/></a>
         </div>
 
         <div id="footer-lower-section-copy">
