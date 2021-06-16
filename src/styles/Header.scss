@@ -1,0 +1,50 @@
+@import './App.scss';
+
+header.header-main-top{
+	height: $headerHeight-desktop;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	background-color: lavender;
+
+
+	// TODO - restructure header so that top row can overlap bottom row nav
+	section.header-left{
+		background-color: lightblue;
+		display: flex;
+		flex-direction: row;
+	}
+	section.header-center{
+		background-color: mintcream;
+		justify-self: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		
+		.logo-bc{
+			color: red;
+		}
+		nav ul{
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			li{
+				background-color: olive;
+			}
+		}
+
+	}
+	section.header-right{
+		background-color: lightpink;
+		display: flex;
+		flex-direction: column;
+		nav ul{
+			display: flex;
+			flex-direction: row;
+			align-items: flex-end;
+			background-color: orchid;
+		}
+
+	}
+}

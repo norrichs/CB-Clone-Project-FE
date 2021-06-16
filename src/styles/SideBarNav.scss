@@ -1,0 +1,10 @@
+@import './App.scss';
+
+nav.sidebar-nav{
+	background-color: sandybrown;
+	width: $sidebarWidth-desktop;
+	ul{
+		display: flex;
+		flex-direction: column;
+	}
+}

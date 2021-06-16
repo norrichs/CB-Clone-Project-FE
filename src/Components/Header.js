@@ -1,9 +1,10 @@
 import React from 'react'; 
 import {NavLink} from 'react-router-dom'
+import '../styles/Header.scss'
 
 const Header = () => {
     return (
-        <header>
+        <header className="header-main-top">
             <section className="header-left">
                 <div>Customer Service</div>
                 <div>Student Discount</div>
@@ -11,7 +12,7 @@ const Header = () => {
                 <div>...</div>
             </section>
             <section className='header-center'>
-                <div>Logo</div>
+                <div className='logo-bc'>Logo</div>
                 <nav>
                     <ul>
                     <li>
@@ -42,7 +43,8 @@ const Header = () => {
                     </ul>
                 </nav>
             </section>
-                <div>
+            <section className='header-right'>
+                <nav>
                     <ul>
                         <li>
                             <div>Sign in</div>
@@ -54,11 +56,10 @@ const Header = () => {
                             <div>Shopping Bag</div>
                         </li>
                     </ul>
-                </div>
+                </nav>
                 <div>
                     Search products
                 </div>
-            <section className='header-right'>
                 
             </section>
         </header>
