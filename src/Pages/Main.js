@@ -1,13 +1,10 @@
-
-import { Link } from "react-router-dom";
-import SideBarNav from '../Components/SideBarNav'
 import react from 'react'
 import { GiPlainCircle } from 'react-icons/gi'
 import { MdFavorite } from 'react-icons/md'
 
 import { useParams } from 'react-router';
 
-
+import {link} from 'react-router-dom'
     //  {/* <ChatButton/> */}
     //  {/* <FilterAndSortModal/> */}
     //  {/* <ProductCard/> */}
@@ -30,34 +27,42 @@ import ProductCard from '../Components/ProductCard'
 // import ProductCardFavorite from './Componets/ProductCardFavorite';
 // import ReturnToTopButton from './Componets/ReturnToTopButton';
 // import ShowingSticky from './Componets/ShowingSticky';
+// import SideBarNav from './Componets/SideBarNav';
 // import SignInModal from './Componets/SignInModal';
 // import StikyFilterHeader from './Componets/StickyFilterHeader.jsHamburgerDropdown';
 
 
+
 // console.log('test');
 
-const Main = ({ url }, props) => {
-	// console.log('this is the props', props)
-	// console.log(url)
-	console.log("this is the useParams", useParams());
-	const { audience, category, group } = useParams();
+const Main = ({url}, props) => {
+    // console.log('this is the props', props)
+    // console.log(url)
+    console.log('this is the useParams', useParams());
+    const {audence, category, group } = useParams()
 
-	
-    
     const getProduct = () => {
-		fetch(url + "audience")
-			.then((res) => res.json())
-			.then((data) => {
-				console.log("received user data", data.data);
-			});
-	};
+        fetch(url + 'audience')
+        .then((res) => res.json())
+        .then((data) => {
+            console.log("received user data", data.data);
+        })
+    }
+    
+
+
+    
     return (
-        <main>
+        <>
         <h1>this is the Main PAGE</h1>
-  <SideBarNav/>
-			<ContentContainer>
-				{`${audience}/${category}/${group}`}
-			</ContentContainer>
+        <ContentContainer>
+            <p>/:audience</p>
+        </ContentContainer>
+
+        <ContentContainer>
+            <p>/:audience/:category</p>
+        </ContentContainer>
+
         <ContentContainer>
         <p>/:audience/:category/:group</p>
         {ProductCard}
@@ -92,8 +97,8 @@ const Main = ({ url }, props) => {
 
 
         </ContentContainer>
-        </main>
+        </>
     )
 }
-
-export default Main;
+// Main()
+export default Main
