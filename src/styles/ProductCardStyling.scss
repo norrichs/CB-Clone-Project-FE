@@ -16,34 +16,23 @@ body {
     margin: 0px;
 }
 
-// #root {
-//     margin: 0px;
-//     background: rgb(95, 243, 213);
-//     // box-sizing: border-box; 
-// }
-
-
 
 /////////////////////////////////////////////////////////////
          ////////////// PRODUCT CARD //////////
 /////////////////////////////////////////////////////////////
 .card-container {
-    // box-sizing: border-box;
     // border: 2px solid rgb(165, 243, 123);
+    // box-sizing: border-box;
     height: 370px;
     width: 200px;
-    // background: #FAF9F8;
+    margin: 4px;
     background: #FAF9F8;
 
     .card-image-container {
-        // box-sizing: border-box;
         // border: 2px solid red;
+        // box-sizing: border-box;
         height: 300px;
         width: 200px ;
-        
-        // overflow: hidden;
-        // background-image: contain;
-        // object-fit: cover;
     }
     .card-image {
         box-sizing: border-box;
@@ -62,7 +51,7 @@ body {
         left: 175px;
         display: flex;
         justify-content: center;
-        transform: scale(1.2);
+        font-size: 20px;
         color: $mainWhite; 
         &:hover {
             color: red; 
@@ -83,15 +72,31 @@ body {
          width: 50%;
          margin-top: 5px;
         #card-circles-1 {
-            // border: 2px solid red;
-            transform: scale(.1);
+            font-size: 10px;
             color:lightgrey;
+            margin: 2px;
+            &:hover {
+                // color: red;
+                font-size: 12px;
+            }
         }
         #card-circles-2 {
+            font-size: 10px;
             color: lightgrey;
+            margin: 2px;
+            &:hover {
+                // color: red;
+                font-size: 12px
+            }
         }
         #card-circles-3 {
+            font-size: 10px;
             color: lightgrey;
+            margin: 2px;
+            &:hover {
+                // color: red;
+                font-size: 12px
+            }
         }
      }
     }
