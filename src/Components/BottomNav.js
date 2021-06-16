@@ -10,6 +10,10 @@ import {ImPinterest} from 'react-icons/im'
 const BottomNav = () => {
 return (
     <>
+    {/* <div>
+      <h4>SHOP</h4>
+    </div> */}
+
     <div id="footer-container">
     <section id="footer-content-container">
     <div id="footer-col1">

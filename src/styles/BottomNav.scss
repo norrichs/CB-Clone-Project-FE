@@ -1,3 +1,10 @@
+
+body {
+    // font-family: 'Mukta', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
 $logo : #E40011;
 $mainWhite : #FAF9F8;
 $callBlue : #25417A;
@@ -15,21 +22,21 @@ $bottomNav : #E4E4E4;
 
 #footer-container {
     // border: 2px solid red;
-    // background: red;
-    height: 500px;
+    background: $bottomNav;
+    height: 420px;
     width: 100%; 
     // padding: 40px 0 40px 0 ;
     display: flex;
     justify-content: center;
-    align-items: center;
+    // margin-top: 50px;
 
     #footer-content-container {
-        border: 2px solid blue; 
+        // border: 2px solid blue; 
         height: 300px; 
         width: 50%;
         display: flex;
         justify-content: space-around;
-        
+        margin-top: 50px;
     }
     
     #footer-col1 {
@@ -99,7 +106,7 @@ $bottomNav : #E4E4E4;
     width: 30%;
     margin: 0 auto;
     position: relative;
-    bottom: 100px;
+    bottom: 130px;
     
     #footer-lower-section-icons {
         // border: 2px solid red;
@@ -129,6 +136,6 @@ $bottomNav : #E4E4E4;
         // border: 2px solid red;
         position: relative;
         top: 5px;
-        margin: 0 5px 0 10px;
+        margin: 0 3px 0 9px;
     }
 }
