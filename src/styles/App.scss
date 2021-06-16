@@ -1,0 +1,23 @@
+@import '../../node_modules/reset-css/reset.css';
+
+$logo : #E40011;
+$mainWhite : #FAF9F8;
+$callBlue : #25417A;
+$callCream : #F1EBDF;
+$callGrey : #CEC6BA;
+$favWhite : #FAF9F8;
+$favRed : #E40011;
+$buttonBlack : #222222;
+$buttonWhite : #FFFFFF;
+$imgBackground : #E4E3E1;
+$chat : #222222;
+$bottomNav : #E4E4E4;
+
+// Global dimensions
+$headerHeight-desktop: 100px;
+$sidebarWidth-desktop: 150px;
+
+*{
+	box-sizing: border-box;
+	border: 1px solid magenta;
+}
