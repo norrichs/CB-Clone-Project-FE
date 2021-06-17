@@ -31,9 +31,6 @@ const ProductCard = () => {
             </div>
         </div>
 
-
-
-        
     )
 
 }

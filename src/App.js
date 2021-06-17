@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './styles/App.scss'
 import './styles/ProductCardStyling.scss'
+import './styles/BottomNav.scss'
 import { Route, Link, Switch } from 'react-router-dom';
 
 

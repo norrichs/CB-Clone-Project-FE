@@ -1,5 +1,9 @@
 @import '../../node_modules/reset-css/reset.css';
+body {
+    font-family: 'Ubuntu', sans-serif;
+};
 
+// Global colors (see Notion board for reference)
 $logo : #E40011;
 $mainWhite : #FAF9F8;
 $callBlue : #25417A;
@@ -12,6 +16,7 @@ $buttonWhite : #FFFFFF;
 $imgBackground : #E4E3E1;
 $chat : #222222;
 $bottomNav : #E4E4E4;
+$ltGrey : #605e5e;
 $activeNavLink : #e50010;
 
 // Global dimensions
