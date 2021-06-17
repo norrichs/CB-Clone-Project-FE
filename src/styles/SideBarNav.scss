@@ -1,6 +1,7 @@
 @import './App.scss';
 
 $navbarindent: 10px;
+
 *{
 	box-sizing: border-box;
 	// border: 1px solid grey !important;
@@ -17,13 +18,16 @@ li{
 	list-style-type: none;
 }
 nav.sidebar-nav{
+	font-weight: 300;
+	font-size: .75em;	
 	h2{
 		font-weight: 700;
 		margin-bottom: 10px;
 	}
 	padding-left: 24px;
 	// background-color: sandybrown;
-	width: $sidebarWidth-desktop;
+	min-width: $sidebarWidth-desktop;
+	max-width: $sidebarWidth-desktop;
 	ul{
 		display: flex;
 		flex-direction: column;
@@ -33,7 +37,7 @@ nav.sidebar-nav{
 		padding-left: 0px;
 	}
 	li{
-		margin-bottom: 0px;
+		margin-bottom: 5px;
 	}
 	li.side-nav-group{ margin-left: $navbarindent}
 }
