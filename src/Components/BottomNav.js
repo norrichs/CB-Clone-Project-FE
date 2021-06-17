@@ -1,4 +1,4 @@
-import react from 'react'
+import React from 'react'
 import {NavLink} from 'react-router-dom'
 import {AiFillFacebook} from 'react-icons/ai'
 import {AiOutlineTwitter} from 'react-icons/ai'

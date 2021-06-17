@@ -1,4 +1,4 @@
-import react from 'react'
+import React from 'react'
 import '../styles/ChatButton.scss'
 import {BsChatSquareDots} from 'react-icons/bs'
 

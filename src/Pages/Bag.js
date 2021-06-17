@@ -1,4 +1,4 @@
-import react from 'react'
+import React from 'react'
 
 const Bag = () => {
 return <h1>this is the Bag PAGE</h1>

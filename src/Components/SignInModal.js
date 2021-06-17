@@ -1,4 +1,4 @@
-import react from 'react';
+import React from 'react';
 
 const SignInModal = () => {
     return <h1>this is the SignInModal</h1>

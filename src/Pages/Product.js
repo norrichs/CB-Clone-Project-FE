@@ -1,4 +1,4 @@
-import react from 'react'
+import React from 'react'
 
 const Product = () => {
 return <h1>this is the Product PAGE</h1>

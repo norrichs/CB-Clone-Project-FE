@@ -1,4 +1,4 @@
-import react from 'react';
+import React from 'react';
 
 const ShowingSticky = () => {
     return <h1>this is the ShowingSticky</h1>
