@@ -1,5 +1,4 @@
 import react from 'react'
-// import './styles/BottomNav.scss'
 import {NavLink} from 'react-router-dom'
 import {AiFillFacebook} from 'react-icons/ai'
 import {AiOutlineTwitter} from 'react-icons/ai'
@@ -22,26 +21,26 @@ return (
     </div> */}
     <nav>
       <ul>
-        <li>
+        <li className="footer-links">
           <NavLink to="/women" className="selected" >Women</NavLink>
         </li>
-        <li>
+        <li className="footer-links">
           <NavLink to="/divided" className="selected">Divided</NavLink>
         </li>
-        <li>
+        <li className="footer-links">
           <NavLink to="/men" className="selected">Men</NavLink>
         </li>
-        <li>
+        <li className="footer-links">
           <NavLink to="/baby" className="selected">Baby</NavLink>
         </li>
-        <li>
+        <li className="footer-links">
           <NavLink to="/kids" className="selected">Kids</NavLink>
         </li>
-        <li>
+        <li className="footer-links">
           <NavLink to="/home" className="selected">H&M HOME</NavLink>
         </li>
-        <li>
-          <NavLink to="/studentDiscount" className="selected">Student Discount</NavLink>
+        <li className="footer-links">
+          <NavLink to="/unidays" className="selected">Student Discount</NavLink>
         </li>
       </ul>
     </nav>
@@ -53,23 +52,23 @@ return (
     </div> */}
     <nav>
       <ul>
-        <li>
-          <NavLink to="/career" className="selected" >Career at H&M</NavLink>
+        <li className="footer-links">
+          <NavLink to="fake/:career" className="selected" >Career at H&M</NavLink>
         </li>
-        <li>
-          <NavLink to="/about" className="selected">About H&M</NavLink>
+        <li className="footer-links">
+          <NavLink to="fake/:about" className="selected">About H&M</NavLink>
         </li>
-        <li>
-          <NavLink to="/sustainability" className="selected">Sustainability</NavLink>
+        <li className="footer-links">
+          <NavLink to="fake/:sustainability" className="selected">Sustainability</NavLink>
         </li>
-        <li>
-          <NavLink to="/press" className="selected">Press</NavLink>
+        <li className="footer-links">
+          <NavLink to="fake/:press" className="selected">Press</NavLink>
         </li>
-        <li>
-          <NavLink to="/investorRelations" className="selected">Investor Relations</NavLink>
+        <li className="footer-links">
+          <NavLink to="fake/:investorRelations" className="selected">Investor Relations</NavLink>
         </li>
-        <li>
-          <NavLink to="/corporate" className="selected">Corporate Governance</NavLink>
+        <li className="footer-links">
+          <NavLink to="fake/:corporate" className="selected">Corporate Governance</NavLink>
         </li>
       </ul>
     </nav>
@@ -81,29 +80,29 @@ return (
     </div> */}
     <nav>
       <ul>
-        <li>
-          <NavLink to="/customerService" className="selected" >Customer Service</NavLink>
+        <li className="footer-links">
+          <NavLink to="fake/:customerService" className="selected" >Customer Service</NavLink>
         </li>
-        <li>
-          <NavLink to="/myAccount" className="selected">My Account</NavLink>
+        <li className="footer-links">
+          <NavLink to="fake/:myAccount" className="selected">My Account</NavLink>
         </li>
-        <li>
-          <NavLink to="/findAStore" className="selected">Find a Store</NavLink>
+        <li className="footer-links">
+          <NavLink to="fake/:findAStore" className="selected">Find a Store</NavLink>
         </li>
-        <li>
-          <NavLink to="/legal" className="selected">Legal & Privicy</NavLink>
+        <li className="footer-links">
+          <NavLink to="fake/:legal" className="selected">Legal & Privicy</NavLink>
         </li>
-        <li>
-          <NavLink to="/contact" className="selected">Contact</NavLink>
+        <li className="footer-links">
+          <NavLink to="fake/:contact" className="selected">Contact</NavLink>
         </li>
-        <li>
-          <NavLink to="/giftCard" className="selected">Gift Card</NavLink>
+        <li className="footer-links">
+          <NavLink to="fake/:giftCard" className="selected">Gift Card</NavLink>
         </li>
-        <li>
-          <NavLink to="/supplyChain" className="selected">CA Supply Chains Act</NavLink>
+        <li className="footer-links">
+          <NavLink to="fake/:supplyChain" className="selected">CA Supply Chains Act</NavLink>
         </li>
-        <li>
-          <NavLink to="/cookieSettings" className="selected">Cookie settings</NavLink>
+        <li className="footer-links">
+          <NavLink to="fake/:cookieSettings" className="selected">Cookie settings</NavLink>
         </li>
       </ul>
     </nav>
@@ -114,8 +113,8 @@ return (
     </div> */}
     <nav>
       <ul>
-        <li>
-          <NavLink to="/join" className="selected" >Join now and get 10% off your next purchase</NavLink>
+        <li className="footer-links">
+          <NavLink to="/fake/:join" className="selected" >Join now and get 10% off your next purchase</NavLink>
         </li>
       </ul>
     </nav>
@@ -124,13 +123,8 @@ return (
     </div>
 
 
-
-
-
-
     <div id="footer-lower-section-container">
         <div id="footer-lower-section-icons">
-            {/* these icons below are just placehoder for now... links dont work */}
             <a href="https://www.facebook.com/hmtheus" target="blank" alt="facebook logo" ><AiFillFacebook/></a> 
             <a href="https://twitter.com/hmusa" target="blank" alt="twitter logo"><AiOutlineTwitter/></a>
             <a href="https://www.instagram.com/hm/" target="blank" alt="instagram logo"><AiOutlineInstagram/></a>

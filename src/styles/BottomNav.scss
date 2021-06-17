@@ -1,29 +1,10 @@
-
-body {
-    // font-family: 'Mukta', sans-serif;
-    font-family: 'Ubuntu', sans-serif;
-}
-
-
-$logo : #E40011;
-$mainWhite : #FAF9F8;
-$callBlue : #25417A;
-$callCream : #F1EBDF;
-$callGrey : #CEC6BA;
-$favWhite : #FAF9F8;
-$favRed : #E40011;
-$buttonBlack : #222222;
-$buttonWhite : #FFFFFF;
-$imgBackground : #E4E3E1;
-$chat : #222222;
-$bottomNav : #E4E4E4;
-
-
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500&display=swap');
+@import './App.scss';
 
 #footer-container {
     // border: 2px solid red;
     background: $bottomNav;
-    height: 420px;
+    height: 500px;
     width: 100%; 
     // padding: 40px 0 40px 0 ;
     display: flex;
@@ -33,10 +14,14 @@ $bottomNav : #E4E4E4;
     #footer-content-container {
         // border: 2px solid blue; 
         height: 300px; 
-        width: 50%;
+        width: 700px;
         display: flex;
         justify-content: space-around;
-        margin-top: 50px;
+        margin-top: 20px;
+
+        .footer-links {
+            margin-top: 15px;
+        }
     }
     
     #footer-col1 {
@@ -45,13 +30,13 @@ $bottomNav : #E4E4E4;
         height: 100%;
         width: 200px;
         display: flex;
-        // flex-direction: column;
         justify-content:space-between;
-        
+
         .selected {
             // border: 2px solid red;
-            // margin:5px 0 5px 0;
-            // margin-top: 50px;
+            text-decoration: none;
+            color: $ltGrey;
+            font-size: .65em;
         }
     }
     #footer-col2 {
@@ -60,13 +45,14 @@ $bottomNav : #E4E4E4;
         height: 100%;
         width: 200px;
         display: flex;
-        // flex-direction: column;
+
         justify-content:space-between;
         
         .selected {
             // border: 2px solid red;
-            // margin:5px 0 5px 0;
-            // margin-top: 50px;
+            text-decoration: none;
+            color: $ltGrey;
+            font-size: .65em;
         }
     }
     #footer-col3 {
@@ -80,8 +66,9 @@ $bottomNav : #E4E4E4;
         
         .selected {
             // border: 2px solid red;
-            // margin:5px 0 5px 0;
-            // margin-top: 50px;
+            text-decoration: none;
+            color: $ltGrey;
+            font-size: .65em;
         }
     }
     #footer-col4 {
@@ -95,22 +82,29 @@ $bottomNav : #E4E4E4;
         
         .selected {
             // border: 2px solid red;
-            // margin:5px 0 5px 0;
-            // margin-top: 50px;
+            text-decoration: none;
+            color: $ltGrey;
+            font-size: .65em;
         }
     }
 }
 
 #footer-lower-section-container {
-    // border: 2px solid red;;
-    width: 30%;
+    // border: 2px solid red;
+    width: 500px;
     margin: 0 auto;
     position: relative;
     bottom: 130px;
+    color: $ltGrey;
+    a:visited {
+        color: $ltGrey;
+    }
     
     #footer-lower-section-icons {
         // border: 2px solid red;
-        width: 50%;
+        text-decoration: none;
+        color: $ltGrey;
+        width: 70%;
         margin: 0 auto;
         text-align: center;
         font-size: 1em;
@@ -119,10 +113,10 @@ $bottomNav : #E4E4E4;
         margin-bottom:15px;
     }
 
-
     #footer-lower-section-copy {
         text-align: center;
         font-size: .7em;
+        font-weight: 300;
     }
 
     #footer-lower-section-logo {
@@ -138,4 +132,5 @@ $bottomNav : #E4E4E4;
         top: 5px;
         margin: 0 3px 0 9px;
     }
+   
 }
