@@ -5,7 +5,6 @@ import './styles/BottomNav.scss'
 import { Route, Link, Switch } from 'react-router-dom';
 
 
-
 /////////////// COMPONENTS BELOW /////////////////////
 import Header from './Components/Header';
 import ExpandableHeader from './Components/ExpandableHeader';
@@ -70,7 +69,7 @@ const getCategory = async () => {
         <Route exact path="/:audience">
           <Main
             url={url}
-          />
+            />
         </Route>
         <Route exact path="/:audience/:category">
           <Main/>
@@ -88,7 +87,7 @@ const getCategory = async () => {
           <Favorites/>
         </Route>
       </Switch>
-        <BottomNav/>
+      <BottomNav/>
 
     </div>
   );

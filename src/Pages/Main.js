@@ -1,7 +1,8 @@
-
+import react from 'react'
 import { Link } from "react-router-dom";
 import SideBarNav from '../Components/SideBarNav'
-import react from 'react'
+import ChatButton from '../Components/ChatButton';
+
 
 
 import { useParams } from 'react-router';
@@ -59,6 +60,7 @@ const Main = ({ url }, props) => {
         </ContentContainer>
         <h3>this is where the product Card will go</h3>
         {ProductCard}
+        <ChatButton/>
         </main>
     )
 }
