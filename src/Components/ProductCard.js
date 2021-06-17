@@ -1,4 +1,4 @@
-import react from 'react';
+import React from 'react';
 import { GiPlainCircle } from 'react-icons/gi'
 import { MdFavorite } from 'react-icons/md'
 

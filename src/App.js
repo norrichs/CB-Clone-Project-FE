@@ -29,7 +29,7 @@ function App() {
   const [category, setCategory] = React.useState([]);
   const [group, setGroup] = React.useState([]);
   const [bag, setBag] = React.useState([])
-  
+  const [showExpandableHeader, setShowExpandableHeader] = React.useState(false)
   
 ////////// CRUD FUNCTIONS HERE ///////////////
 // const getProduct = () => {
@@ -52,6 +52,9 @@ const getCategory = async () => {
   const data = await response.json()
   console.log('this is the data', data)
   setCategory(data)
+}
+const revealExpandableHeader = () => {
+  
 }
 
 
