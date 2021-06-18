@@ -2,7 +2,7 @@ import React from 'react';
 import { GiPlainCircle } from 'react-icons/gi'
 import { MdFavorite } from 'react-icons/md'
 
-const ProductCard = () => {
+const ProductCard = ({p}) => {
     return (
         
         <div class="card-container">

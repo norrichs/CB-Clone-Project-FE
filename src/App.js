@@ -1,8 +1,8 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './styles/App.scss'
 import './styles/ProductCardStyling.scss'
 import './styles/BottomNav.scss'
-import { Route, Link, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 
 /////////////// COMPONENTS BELOW /////////////////////
@@ -17,14 +17,9 @@ import Splash from './Pages/Splash';
 import Bag from './Pages/Bag';
 import Favorites from './Pages/Favorites'
 
-
-
-
-
-// to set the user state of the page
-
 function App() {
-  const url = ('https://ccexp5wwrk.execute-api.us-east-2.amazonaws.com/dev/product/men/suits-blazers/suits')
+  const awsURL = 'https://ccexp5wwrk.execute-api.us-east-2.amazonaws.com/dev';
+
   const [audience, setAudience] = React.useState([]);
   const [category, setCategory] = React.useState([]);
   const [group, setGroup] = React.useState([]);
@@ -38,21 +33,21 @@ function App() {
 //   .then((data) => setProduct(data.body))
 //   console.log(url)
 // }
-const getAudience = async () => {
-  const response = await fetch(url + '/')
-  console.log(response) 
-  const data = await response.json()
-  console.log('this is the data', data)
-  setAudience(data)
-}
+// const getAudience = async () => {
+//   const response = await fetch(url + '/')
+//   console.log(response) 
+//   const data = await response.json()
+//   console.log('this is the data', data)
+//   setAudience(data)
+// }
 
-const getCategory = async () => {
-  const response = await fetch(url + '/:')
-  console.log(response) 
-  const data = await response.json()
-  console.log('this is the data', data)
-  setCategory(data)
-}
+// const getCategory = async () => {
+//   const response = await fetch(url + '/:')
+//   console.log(response) 
+//   const data = await response.json()
+//   console.log('this is the data', data)
+//   setCategory(data)
+// }
 const revealExpandableHeader = () => {
   
 }
@@ -71,15 +66,17 @@ const revealExpandableHeader = () => {
         </Route>
         <Route exact path="/:audience">
           <Main
-            url={url}
+            awsURL={awsURL}
             />
         </Route>
         <Route exact path="/:audience/:category">
-          <Main/>
+          <Main
+            awsURL={awsURL}/>
         </Route>
 
         <Route exact path="/:audience/:category/:group">
-          <Main/>
+          <Main
+            awsURL={awsURL}/>
         </Route>
 
         <Route exact path="/bag">
