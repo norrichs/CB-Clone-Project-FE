@@ -2,25 +2,39 @@
 //NOTE: all variables are being imported from App.scss
 
 
+.trending-container-heading h3 {
+    // border: 2px solid red;
+    display: flex;
+    justify-content: center;
+    margin: 40px 0 20px 0; 
+    font-size: .8em;
+    font-weight: 500;
+}
+
 .slider {
     // border: 3px solid blue;
     width: 300px;
-    overflow-x: auto;
+    overflow-x: scroll;
 
     scroll-snap-type: x mandatory;
+    scrollbar-width: 30px;
+
     // -webkit-overflow-scrolling: touch;
+    &::-webkit-scrollbar {
+    // width: 0;
+    // background: transparent;
+    }
 }
-
-
 
 
 .trending-container {
     // border: 2px solid red;
     margin: 0 auto;
-    width: $callWidth-desktop;
+    // width: $callWidth-desktop;
+    width: 640px;
     display: flex;
-    justify-content: center;
-    
+    // justify-content: center;
+    // overflow: hidden;
     margin-bottom: 50px;
 
     .trending-single-image-container {
@@ -37,8 +51,8 @@
         
           .trending-image img {
             // border: 2px solid red;
-            height: 80px;
-            width: 80px;
+            height: 50px;
+            width: 50px;
             border-radius: 50%;
             object-fit: cover;
             // position: relative;
@@ -48,11 +62,13 @@
             .trending-image-copy {
                 margin: 10px 0 0 0;
                 text-align: center;
-                font-size: .65em;
+                font-size: .45em;
             }
             .trending-image-copy p:nth-of-type(2) {
+                // border: 2px solid red;
                 margin: 4px 0 0 0;
                 font-weight: 600;
+                // font-size: .2em
             }
         }
 
