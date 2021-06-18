@@ -7,10 +7,10 @@ const Header = () => {
         <header className="header-main-top">
                 <nav className="top-left">
                     <ul>
-                        <li><Link to="/customer-service">Customer Service</Link></li>
-                        <li><Link to="/student-discount">Student Discount</Link></li>
-                        <li><Link to="/store-locator">Find a store</Link></li>
-                        <li>...</li>
+                        <li><Link>Customer Service</Link></li>
+                        <li><Link>Student Discount</Link></li>
+                        <li><Link>Find a store</Link></li>
+                        <li><Link>...</Link></li>
                     </ul>
                 </nav>
                 <div className='logo-bc'>Logo</div>

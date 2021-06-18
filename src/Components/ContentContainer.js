@@ -1,23 +1,16 @@
-import react from 'react'; 
+import React from "react";
+import "../styles/ContentContainer.scss";
+import { useParams } from "react-router-dom";
 
 const ContentContainer = (props) => {
+	const params = useParams();
 
+	return (
+		<div className="content-container">
+			<h2>{`${params.audience}/${params.category}/${params.group}`}</h2>
+			<section className="content">{props.children}</section>
+		</div>
+	);
+};
 
-
-    
-
-
-
-
-
-
-
-    return (
-        <>
-        <h1>this is the ContentContainer</h1>
-        {props.children}
-        </>
-    )
-}
-
-export default ContentContainer; 
+export default ContentContainer;

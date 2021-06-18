@@ -1,4 +1,4 @@
-import react from 'react';
+import React from 'react';
 
 const StikyFilterHeader = () => {
     return <h1>this is the StikyFilterHeader</h1>

@@ -1,4 +1,4 @@
-import react from 'react'; 
+import React from 'react'; 
 
 const ReturnToTopButton = () => {
     return <h1>this is the ReturnToTopButton</h1>

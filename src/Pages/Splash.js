@@ -1,4 +1,4 @@
-import react from 'react'
+import React from 'react'
 
 const Splash = () => {
 return <h1>this is the Splash PAGE</h1>

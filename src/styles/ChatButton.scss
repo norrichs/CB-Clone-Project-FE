@@ -1,0 +1,36 @@
+@import './App.scss';
+
+#chat-button-container {
+    // border: 2px solid red;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; 
+    
+    // Different layout option for chat button
+    // maybe do a better job
+    position: absolute;
+    bottom: 20%;
+
+
+    #chat-button-background {
+        background: $chat;
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+    }
+
+
+    #chat-button {
+        // border: 2px solid red;
+        margin-top: 7px;
+        font-size:30px;
+        color: $buttonWhite;
+        transform: scaleX(-1);
+        
+    }
+}

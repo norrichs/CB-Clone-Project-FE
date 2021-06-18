@@ -1,0 +1,47 @@
+@import './App.scss';
+
+$navbarindent: 10px;
+
+*{
+	box-sizing: border-box;
+	// border: 1px solid grey !important;
+}
+a{
+	color: black;
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: underline;
+	color: $activeNavLink;
+}
+li{
+	list-style-type: none;
+}
+nav.sidebar-nav{
+	font-weight: 300;
+	font-size: .75em;	
+	h2{
+		font-weight: 700;
+		margin-bottom: 10px;
+	}
+	padding-left: 24px;
+	// background-color: sandybrown;
+	min-width: $sidebarWidth-desktop;
+	max-width: $sidebarWidth-desktop;
+	ul{
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 15px;
+	}
+	nav ul{
+		padding-left: 0px;
+	}
+	li{
+		margin-bottom: 5px;
+	}
+	li.side-nav-group{ margin-left: $navbarindent}
+}
+
+.active-navlink{
+	color: $activeNavLink;
+}
