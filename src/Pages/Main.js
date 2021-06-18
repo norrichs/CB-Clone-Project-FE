@@ -2,48 +2,21 @@ import React, { useEffect } from "react";
 // import { Link } from "react-router-dom";
 import SideBarNav from "../Components/SideBarNav";
 import ChatButton from "../Components/ChatButton";
-import { useParams } from "react-router";
-
-//  {/* <ChatButton/> */}
-//  {/* <FilterAndSortModal/> */}
-//  {/* <ProductCard/> */}
-//  {/* <ProductCardFavorite/> */}
-//  {/* <ReturnToTopButton/> */}
-//  {/* <ShowingSticky/> */}
-//  {/* <SideBarNav/> */}
-//  {/* <SignInModal/> */}
-//  {/* <StikyFilterHeader/> */}
-
+import { useParams, useLocation } from "react-router";
 import ContentContainer from "../Components/ContentContainer";
 import ProductCard from "../Components/ProductCard";
 import '../styles/Main.scss'
 
-// import ChatButton from './Componets/ChatButton';
-// import FilterAndSortModal from './Componets/FilterAndSortModal';
-// import ProductCard from './Componets/ProductCard';
-// import ProductCardFavorite from './Componets/ProductCardFavorite';
-// import ReturnToTopButton from './Componets/ReturnToTopButton';
-// import ShowingSticky from './Componets/ShowingSticky';
-// import SignInModal from './Componets/SignInModal';
-// import StikyFilterHeader from './Componets/StickyFilterHeader.jsHamburgerDropdown';
-
 // console.log('test');
 
-const Main = ({ awsURL }, props) => {
+const Main = ({ awsURL, imgBaseURL }, props) => {
 	// console.log('this is the props', props)
 	// console.log('awsurl', awsURL)
 	// console.log("these are the params", useParams());
 	const { audience, category, group } = useParams();
-
+	const location = useLocation()
 	const [contentDisplay, setContentDisplay] = React.useState([])
 	
-	// const getProduct = () => {
-	// 	fetch(url + "audience")
-	// 		.then((res) => res.json())
-	// 		.then((data) => {
-	// 			console.log("received user data", data.data);
-	// 		});
-	// };
 	// console.log(awsURL + "/product/" + audience + "/" + category + "/" + group)
 	const getProductFamilies = async () => {
 		// console.log('fetching: ' + awsURL + "/product/" + audience + "/" + category + "/" + group + "/")
@@ -54,14 +27,31 @@ const Main = ({ awsURL }, props) => {
 			})
 			.then((data)=>{
 				// console.log('got data', data)
-				setContentDisplay(data.body.Items.map((pFam, i)=> <ProductCard key={i} pFam={pFam}/>))
+				setContentDisplay(data.body.Items.map((pFam, i)=> {
+					console.log('setContentDisplay product family data: ', pFam)
+					return (<ProductCard 
+						key={i}
+						imgBaseURL={imgBaseURL} 
+						pFam={{
+							audience: pFam.audience,
+							category: pFam.category,
+							group: pFam.group,
+							price: pFam.price,
+							price_sale: pFam.price_sale,
+							image0: pFam.images[0],
+							image1: pFam.images[1],
+							alt0: pFam.altText[0],
+							alt1: pFam.altText[1],
+							label: pFam.product_family
+						}}/>)
+				}))
 			})
 	}
 
 
 	useEffect(()=>{
 		getProductFamilies()
-	},[])
+	},[location])
 	return (
 		<main >
 			<SideBarNav />

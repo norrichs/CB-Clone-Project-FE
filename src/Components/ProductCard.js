@@ -2,20 +2,39 @@ import React from "react";
 import { GiPlainCircle } from "react-icons/gi";
 import { MdFavorite } from "react-icons/md";
 
-const ProductCard = ({ p }) => {
-	return (
-		<div class="card-container">
-			<div class="card-image-container">
+const ProductCard = ({ pFam, imgBaseURL}) => {
+	// console.log("ProductCard product prop:", pFam)
+    
+    //////////////////////////////
+    // * pFam object contents   //
+    //////////////////////////////
+        // audience:    
+        // category:   
+        // group:       
+        // price:       
+        // price_sale:  
+        // image0:     
+        // image1:      
+        // alt0:       
+        // alt1:        
+        // label:      
+
+
+    return (
+		<div className="card-container">
+			<div className="card-image-container">
 				<img
-					alt="dummy text"
-					class="card-image"
-					src="https://res.cloudinary.com/dhad6e9gj/image/upload/v1623788815/Portfolio%20Project/HM%20re-create%20project/kids_clothing_tops-t-shirts_2-pack-Cotton-Henley-ShirtsModel_01_ekvkm5.jpg"
+                    onMouseOver={e => e.target.setAttribute('src', imgBaseURL + pFam.image1)}
+                    onMouseOut ={e => e.target.setAttribute('src',imgBaseURL + pFam.image0)}
+					alt={pFam.alt0}
+					className="card-image"
+					src={imgBaseURL + pFam.image0}
 				/>
 			</div>
 			<div id="card-info">
 				<div id="card-product-name">
-					<article>T-shirt and Shorts</article>
-					<article>$14.99</article>
+					<article>{pFam.label}</article>
+					<article>{pFam.price}</article>
 					<div id="card-circles-container">
 						<span id="card-circles-1">
 							<GiPlainCircle />
