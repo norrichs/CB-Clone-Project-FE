@@ -59,13 +59,6 @@ const Header = () => {
                 <div className="search">
                     Search products
                 </div>
-
-
-
-
-
-
-
             <section className='header-center'>
             </section>
             <section className='header-right'>
