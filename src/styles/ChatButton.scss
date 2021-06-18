@@ -6,7 +6,13 @@
     height: 60px;
     display: flex;
     justify-content: flex-end;
-    align-items: center;    
+    align-items: center; 
+    
+    // Different layout option for chat button
+    // maybe do a better job
+    position: absolute;
+    bottom: 20%;
+
 
     #chat-button-background {
         background: $chat;
