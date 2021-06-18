@@ -20,11 +20,11 @@ import Favorites from './Pages/Favorites'
 function App() {
   const awsURL = 'https://ccexp5wwrk.execute-api.us-east-2.amazonaws.com/dev';
 
-  const [audience, setAudience] = React.useState([]);
-  const [category, setCategory] = React.useState([]);
-  const [group, setGroup] = React.useState([]);
-  const [bag, setBag] = React.useState([])
-  const [showExpandableHeader, setShowExpandableHeader] = React.useState(false)
+  // const [audience, setAudience] = React.useState([]);
+  // const [category, setCategory] = React.useState([]);
+  // const [group, setGroup] = React.useState([]);
+  // const [bag, setBag] = React.useState([])
+  // const [showExpandableHeader, setShowExpandableHeader] = React.useState(false)
   
 ////////// CRUD FUNCTIONS HERE ///////////////
 // const getProduct = () => {
@@ -48,9 +48,7 @@ function App() {
 //   console.log('this is the data', data)
 //   setCategory(data)
 // }
-const revealExpandableHeader = () => {
-  
-}
+// const revealExpandableHeader = () => {}
 
 
 

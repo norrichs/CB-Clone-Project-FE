@@ -31,8 +31,8 @@ import '../styles/Main.scss'
 
 const Main = ({ awsURL }, props) => {
 	// console.log('this is the props', props)
-	console.log('awsurl', awsURL)
-	console.log("these are the params", useParams());
+	// console.log('awsurl', awsURL)
+	// console.log("these are the params", useParams());
 	const { audience, category, group } = useParams();
 
 	const [contentDisplay, setContentDisplay] = React.useState([])
@@ -44,25 +44,23 @@ const Main = ({ awsURL }, props) => {
 	// 			console.log("received user data", data.data);
 	// 		});
 	// };
-	console.log(awsURL + "/product/" + audience + "/" + category + "/" + group)
-	const getProductFamilies = async (audience, category, group) => {
-		console.log('fetching: ' + awsURL + "/product/" + audience + "/" + category + "/" + group + "/")
+	// console.log(awsURL + "/product/" + audience + "/" + category + "/" + group)
+	const getProductFamilies = async () => {
+		// console.log('fetching: ' + awsURL + "/product/" + audience + "/" + category + "/" + group + "/")
 		fetch(awsURL + "/product/" + audience + "/" + category + "/" + group)
 			.then((res) => {
-				console.log('get families response', res)
+				// console.log('get families response', res)
 				return res.json()
 			})
 			.then((data)=>{
-				console.log('got data', data)
+				// console.log('got data', data)
 				setContentDisplay(data.body.Items.map((pFam, i)=> <ProductCard key={i} pFam={pFam}/>))
 			})
 	}
-	//
-	let productDisplay = null
-	useEffect(()=>{
-		let productFamilyData = getProductFamilies(audience, category, group)
-		console.log('pFam data: ', productFamilyData)
 
+
+	useEffect(()=>{
+		getProductFamilies()
 	},[])
 	return (
 		<main >
