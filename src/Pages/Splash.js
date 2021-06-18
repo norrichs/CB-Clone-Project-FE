@@ -1,7 +1,12 @@
 import React from 'react'
+import CallToAction from "../Components/CallToAction1";
 
 const Splash = () => {
-return <h1>this is the Splash PAGE</h1>
+return (
+    <div>
+        <CallToAction/>
+    </div>
+) 
 }
 
 export default Splash

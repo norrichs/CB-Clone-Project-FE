@@ -7,6 +7,7 @@ import ContentContainer from "../Components/ContentContainer";
 import ProductCard from "../Components/ProductCard";
 import '../styles/Main.scss'
 
+
 // console.log('test');
 
 const Main = ({ awsURL, imgBaseURL }, props) => {
@@ -54,6 +55,7 @@ const Main = ({ awsURL, imgBaseURL }, props) => {
 	},[location])
 	return (
 		<main >
+            
 			<SideBarNav />
 			<ContentContainer>
 				{/* <h2>{`${audience}/${category}/${group}`}</h2> */}
