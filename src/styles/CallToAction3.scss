@@ -11,6 +11,7 @@
     width: $callWidth-desktop;
     height: $callLargeHeight-desktop;
     text-align: center;
+    margin-bottom: 10px;
 
     & h2 {
         // border: 2px solid red;
@@ -32,7 +33,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    bottom: 35px;
+    bottom: 45px;
 }
 
 #call-to-action-button {
