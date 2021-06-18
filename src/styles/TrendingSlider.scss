@@ -1,0 +1,62 @@
+@import './App.scss';
+//NOTE: all variables are being imported from App.scss
+
+
+.slider {
+    // border: 3px solid blue;
+    width: 300px;
+    overflow-x: auto;
+
+    scroll-snap-type: x mandatory;
+    // -webkit-overflow-scrolling: touch;
+}
+
+
+
+
+.trending-container {
+    // border: 2px solid red;
+    margin: 0 auto;
+    width: $callWidth-desktop;
+    display: flex;
+    justify-content: center;
+    
+    margin-bottom: 50px;
+
+    .trending-single-image-container {
+        //   border: 2px solid blue;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 100px;
+          margin: 0 10px 0 10px;
+          &:hover {
+              cursor: pointer;
+          }
+        
+          .trending-image img {
+            // border: 2px solid red;
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            // position: relative;
+            // top: 10px;
+            // transform: scale(1.2);
+            }
+            .trending-image-copy {
+                margin: 10px 0 0 0;
+                text-align: center;
+                font-size: .65em;
+            }
+            .trending-image-copy p:nth-of-type(2) {
+                margin: 4px 0 0 0;
+                font-weight: 600;
+            }
+        }
+
+}
+
+
+
