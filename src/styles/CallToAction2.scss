@@ -1,0 +1,37 @@
+@import './App.scss';
+//NOTE: all variables are being imported from App.scss
+
+#call-to-action-container2 {
+    // border: 2px solid red;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: red;
+    width: $callWidth-desktop;
+    height: $callHeight-desktop;
+    text-align: center;
+
+    & h2 {
+        // border: 2px solid red;
+        // color: red;
+        font-size: 1.4em;
+        font-weight: 500;
+        margin-bottom: 5px;
+    }    
+    & p {
+        // border: 2px solid red;
+        // color: red;
+        font-size: .55em;
+    }
+
+    & span {
+        // border: 2px solid red;
+        // color: red;
+        font-size: 1.5em;
+        font-weight: 400;
+        position: relative;
+        left: 100px;
+    }
+
+}
