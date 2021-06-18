@@ -138,7 +138,7 @@ return (
         </div>
 
         <div id="footer-lower-section-logo">
-            <p>BEN <span ><img id="bc-logo" src="https://res.cloudinary.com/dhad6e9gj/image/upload/v1623858722/HM_Site_Project/customLogo_BLACK_sm-06_qsehee.png"/></span> CODY</p>
+            <p>BEN <span ><img alt="b&c" id="bc-logo" src="https://res.cloudinary.com/dhad6e9gj/image/upload/v1623858722/HM_Site_Project/customLogo_BLACK_sm-06_qsehee.png"/></span> CODY</p>
         </div>
     </div>
     </>

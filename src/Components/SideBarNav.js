@@ -1,12 +1,11 @@
 import React from "react";
-import { NavLink, useLocation, useParams } from "react-router-dom";
+import { NavLink,  useParams } from "react-router-dom";
 import "../styles/SideBarNav.scss";
 let tree = require("../data/manifestTree.json");
 
 const SideBarNav = (props) => {
 	console.log(tree);
 	const params = useParams();
-	console.log("par --", params);
 
 	// Map over json manifestTree to build sidebar nav menu
 	const sbn = tree.map((audience, i) => {
