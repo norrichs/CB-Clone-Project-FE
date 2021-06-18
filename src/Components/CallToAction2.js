@@ -2,7 +2,7 @@ import react from 'react';
 import '../styles/CallToAction2.scss'
 import {AiOutlineInfoCircle} from 'react-icons/ai'
 
-const CallToAction = () => {
+const CallToAction2 = () => {
     return (
         
         <div id="call-to-action-container2">
@@ -15,4 +15,4 @@ const CallToAction = () => {
     )
 }
 
-export default CallToAction;
+export default CallToAction2;
