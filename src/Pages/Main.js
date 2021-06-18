@@ -1,8 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 // import { Link } from "react-router-dom";
 import SideBarNav from "../Components/SideBarNav";
 import ChatButton from "../Components/ChatButton";
-
 import { useParams } from "react-router";
 
 //  {/* <ChatButton/> */}
@@ -30,27 +29,48 @@ import '../styles/Main.scss'
 
 // console.log('test');
 
-const Main = ({ url }, props) => {
+const Main = ({ awsURL }, props) => {
 	// console.log('this is the props', props)
-	// console.log(url)
-	console.log("this is the useParams", useParams());
+	console.log('awsurl', awsURL)
+	console.log("these are the params", useParams());
 	const { audience, category, group } = useParams();
 
-	const getProduct = () => {
-		fetch(url + "audience")
-			.then((res) => res.json())
-			.then((data) => {
-				console.log("received user data", data.data);
-			});
-	};
+	const [contentDisplay, setContentDisplay] = React.useState([])
+	
+	// const getProduct = () => {
+	// 	fetch(url + "audience")
+	// 		.then((res) => res.json())
+	// 		.then((data) => {
+	// 			console.log("received user data", data.data);
+	// 		});
+	// };
+	console.log(awsURL + "/product/" + audience + "/" + category + "/" + group)
+	const getProductFamilies = async (audience, category, group) => {
+		console.log('fetching: ' + awsURL + "/product/" + audience + "/" + category + "/" + group + "/")
+		fetch(awsURL + "/product/" + audience + "/" + category + "/" + group)
+			.then((res) => {
+				console.log('get families response', res)
+				return res.json()
+			})
+			.then((data)=>{
+				console.log('got data', data)
+				setContentDisplay(data.body.Items.map((pFam, i)=> <ProductCard key={i} pFam={pFam}/>))
+			})
+	}
+	//
+	let productDisplay = null
+	useEffect(()=>{
+		let productFamilyData = getProductFamilies(audience, category, group)
+		console.log('pFam data: ', productFamilyData)
+
+	},[])
 	return (
 		<main >
 			<SideBarNav />
 			<ContentContainer>
-				{`${audience}/${category}/${group}`}
+				{/* <h2>{`${audience}/${category}/${group}`}</h2> */}
+				{contentDisplay}
 			</ContentContainer>
-			<h3>this is where the product Card will go</h3>
-			{ProductCard}
 			<ChatButton />
 		</main>
 	);
