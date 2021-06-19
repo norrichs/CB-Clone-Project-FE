@@ -6,6 +6,7 @@ import { MdFavorite } from "react-icons/md";
 import { BsHeart } from "react-icons/bs";
 import {RiUser3Line} from 'react-icons/ri'
 import {HiOutlineShoppingBag} from 'react-icons/hi'
+import {BiCircle} from 'react-icons/bi'
 
 
 const Header = () => {
@@ -16,7 +17,10 @@ const Header = () => {
                         <li><Link to="/customer-service">Customer Service</Link></li>
                         <li><Link to="/student-discount">Student Discount</Link></li>
                         <li><Link to="/store-locator">Find a store</Link></li>
-                        <li>...</li>
+                        {/* <li>...</li> */}
+                        <div className="top-left-circles">
+                           <NavLink to="fake/:someSortOfMenuGuy!"><span><BiCircle/></span><span><BiCircle/></span><span><BiCircle/></span></NavLink>
+                        </div>
                     </ul>
                 </nav>
                 <div className='logo-bc'>

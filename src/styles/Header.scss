@@ -82,7 +82,13 @@ header.header-main-top{
 		align-items: center;
 		font-size: 1.1em;
 		margin: 10px 0 0 20px;
-
+		& .top-left-circles span {
+			// color: red;
+			font-size: 7px;
+			font-weight: 600;
+			// margin-left: -5px;
+			// margin-right: -10px;
+		}
 		ul{
 			display: flex;
 			flex-direction: row;
