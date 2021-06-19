@@ -22,25 +22,25 @@ return (
     <nav>
       <ul>
         <li className="footer-links">
-          <NavLink to="/women" className="selected" >Women</NavLink>
+          <NavLink to="/product/women" className="selected" >Women</NavLink>
         </li>
         <li className="footer-links">
-          <NavLink to="/divided" className="selected">Divided</NavLink>
+          <NavLink to="/product/divided" className="selected">Divided</NavLink>
         </li>
         <li className="footer-links">
-          <NavLink to="/men" className="selected">Men</NavLink>
+          <NavLink to="/product/men" className="selected">Men</NavLink>
         </li>
         <li className="footer-links">
-          <NavLink to="/baby" className="selected">Baby</NavLink>
+          <NavLink to="/product/baby" className="selected">Baby</NavLink>
         </li>
         <li className="footer-links">
-          <NavLink to="/kids" className="selected">Kids</NavLink>
+          <NavLink to="/product/kids" className="selected">Kids</NavLink>
         </li>
         <li className="footer-links">
-          <NavLink to="/home" className="selected">H&M HOME</NavLink>
+          <NavLink to="/product/home" className="selected">H&M HOME</NavLink>
         </li>
         <li className="footer-links">
-          <NavLink to="/unidays" className="selected">Student Discount</NavLink>
+          <NavLink to="/sale/unidays" className="selected">Student Discount</NavLink>
         </li>
       </ul>
     </nav>
@@ -53,22 +53,22 @@ return (
     <nav>
       <ul>
         <li className="footer-links">
-          <NavLink to="fake/:career" className="selected" >Career at H&M</NavLink>
+          <NavLink to="/fake/:career" className="selected" >Career at H&M</NavLink>
         </li>
         <li className="footer-links">
-          <NavLink to="fake/:about" className="selected">About H&M</NavLink>
+          <NavLink to="/fake/:about" className="selected">About H&M</NavLink>
         </li>
         <li className="footer-links">
-          <NavLink to="fake/:sustainability" className="selected">Sustainability</NavLink>
+          <NavLink to="/fake/:sustainability" className="selected">Sustainability</NavLink>
         </li>
         <li className="footer-links">
-          <NavLink to="fake/:press" className="selected">Press</NavLink>
+          <NavLink to="/fake/:press" className="selected">Press</NavLink>
         </li>
         <li className="footer-links">
-          <NavLink to="fake/:investorRelations" className="selected">Investor Relations</NavLink>
+          <NavLink to="/fake/:investorRelations" className="selected">Investor Relations</NavLink>
         </li>
         <li className="footer-links">
-          <NavLink to="fake/:corporate" className="selected">Corporate Governance</NavLink>
+          <NavLink to="/fake/:corporate" className="selected">Corporate Governance</NavLink>
         </li>
       </ul>
     </nav>
@@ -81,28 +81,28 @@ return (
     <nav>
       <ul>
         <li className="footer-links">
-          <NavLink to="fake/:customerService" className="selected" >Customer Service</NavLink>
+          <NavLink to="/fake/:customerService" className="selected" >Customer Service</NavLink>
         </li>
         <li className="footer-links">
-          <NavLink to="fake/:myAccount" className="selected">My Account</NavLink>
+          <NavLink to="/fake/:myAccount" className="selected">My Account</NavLink>
         </li>
         <li className="footer-links">
-          <NavLink to="fake/:findAStore" className="selected">Find a Store</NavLink>
+          <NavLink to="/fake/:findAStore" className="selected">Find a Store</NavLink>
         </li>
         <li className="footer-links">
-          <NavLink to="fake/:legal" className="selected">Legal & Privicy</NavLink>
+          <NavLink to="/fake/:legal" className="selected">Legal & Privicy</NavLink>
         </li>
         <li className="footer-links">
-          <NavLink to="fake/:contact" className="selected">Contact</NavLink>
+          <NavLink to="/fake/:contact" className="selected">Contact</NavLink>
         </li>
         <li className="footer-links">
-          <NavLink to="fake/:giftCard" className="selected">Gift Card</NavLink>
+          <NavLink to="/fake/:giftCard" className="selected">Gift Card</NavLink>
         </li>
         <li className="footer-links">
-          <NavLink to="fake/:supplyChain" className="selected">CA Supply Chains Act</NavLink>
+          <NavLink to="/fake/:supplyChain" className="selected">CA Supply Chains Act</NavLink>
         </li>
         <li className="footer-links">
-          <NavLink to="fake/:cookieSettings" className="selected">Cookie settings</NavLink>
+          <NavLink to="/fake/:cookieSettings" className="selected">Cookie settings</NavLink>
         </li>
       </ul>
     </nav>

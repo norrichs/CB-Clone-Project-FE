@@ -14,9 +14,11 @@ const Main = ({ awsURL, imgBaseURL }, props) => {
 	// console.log('this is the props', props)
 	// console.log('awsurl', awsURL)
 	// console.log("these are the params", useParams());
+	console.log('raw main params', useParams())
 	const { audience, category, group } = useParams();
-	console.log('params', audience, category, group)
+	console.log('Main.js params', audience, category, group)
 	const location = useLocation()
+	console.log('location object', location)
 	const [contentDisplay, setContentDisplay] = React.useState([])
 	
 	// console.log(awsURL + "/product/" + audience + "/" + category + "/" + group)

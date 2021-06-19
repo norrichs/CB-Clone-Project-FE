@@ -14,6 +14,7 @@ import Main from "./Pages/Main";
 import Splash from "./Pages/Splash";
 import Bag from "./Pages/Bag";
 import Favorites from "./Pages/Favorites";
+import Detail from "./Pages/Detail";
 
 function App() {
 	const awsURL = "https://ccexp5wwrk.execute-api.us-east-2.amazonaws.com/dev";
@@ -25,6 +26,14 @@ function App() {
 	// const [group, setGroup] = React.useState([]);
 	// const [bag, setBag] = React.useState([])
 	// const [showExpandableHeader, setShowExpandableHeader] = React.useState(false)
+	
+	
+	//////// Dummy Data ////////////////
+	const [dummyDetail, setDummyDetail] = React.useState();
+	const transformResponse = require('./data/transformResponse')
+	const dummyData = require('./data/dummyDetailData.json')
+	////////////////////////////////////
+
 
 	////////// CRUD FUNCTIONS HERE ///////////////
 	// const getProduct = () => {
@@ -49,7 +58,9 @@ function App() {
 	//   setCategory(data)
 	// }
 	// const revealExpandableHeader = () => {}
-
+	React.useEffect(()=>{
+		setDummyDetail(transformResponse(dummyData))
+	},[])
 	return (
 		<div className="App">
 			<Header />
@@ -59,15 +70,19 @@ function App() {
 				<Route exact path="/">
 					<Splash />
 				</Route>
-				<Route exact path="/:audience">
+				<Route exact path="/product/:audience">
 					<Main awsURL={awsURL} imgBaseURL={imgBaseURL} />
 				</Route>
-				<Route exact path="/:audience/:category">
+				<Route exact path="/product/:audience/:category">
 					<Main awsURL={awsURL} imgBaseURL={imgBaseURL} />
 				</Route>
 
-				<Route exact path="/:audience/:category/:group">
+				<Route exact path="/product/:audience/:category/:group">
 					<Main awsURL={awsURL} imgBaseURL={imgBaseURL} />
+				</Route>
+
+				<Route exact path="/detail">
+					<Detail data={dummyDetail}/>
 				</Route>
 
 				<Route exact path="/bag">
