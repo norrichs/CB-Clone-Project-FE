@@ -1,6 +1,12 @@
 import React from 'react'; 
 import {NavLink, Link} from 'react-router-dom'
 import '../styles/Header.scss'
+import {BsSearch} from 'react-icons/bs'
+import { MdFavorite } from "react-icons/md";
+import { BsHeart } from "react-icons/bs";
+import {RiUser3Line} from 'react-icons/ri'
+import {HiOutlineShoppingBag} from 'react-icons/hi'
+
 
 const Header = () => {
     return (
@@ -13,17 +19,22 @@ const Header = () => {
                         <li>...</li>
                     </ul>
                 </nav>
-                <div className='logo-bc'>Logo</div>
+                <div className='logo-bc'>
+                    <NavLink to='/'><img src="https://res.cloudinary.com/dhad6e9gj/image/upload/v1623858729/HM_Site_Project/customLogo_RED_med-03_celm0k.png"/></NavLink>
+                </div>
                 <nav className="top-right">
                     <ul>
                         <li>
-                            <div>Sign in</div>
+                            <span><RiUser3Line/></span>
+                            <NavLink to="fake/:signIn">Sign in</NavLink>
                         </li>
                         <li>
-                            <div>Favorites</div>
+                            <span><BsHeart/></span>
+                            <NavLink to="fake/:Favorites">Favorites</NavLink>
                         </li>
                         <li>
-                            <div>Shopping Bag</div>
+                            <span><HiOutlineShoppingBag/></span>
+                            <NavLink to="fake/:shoppingBag">Shopping Bag</NavLink>
                         </li>
                     </ul>
                 </nav>
@@ -48,16 +59,18 @@ const Header = () => {
                         <NavLink to="/home">H&M HOME</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/sale">Sale</NavLink>
+                        <NavLink to="fake/:sale">Sale</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/sustainability">Sustainability</NavLink>
+                        <NavLink to="fake/:sustainability">Sustainability</NavLink>
                     </li>
 
                     </ul>
                 </nav>
                 <div className="search">
-                    Search products
+                    <span><BsSearch/></span>
+                    {/* <u>Search products<u> */}
+                    <p><u>Search products</u></p>
                 </div>
 
 
