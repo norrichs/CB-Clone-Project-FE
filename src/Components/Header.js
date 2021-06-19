@@ -2,6 +2,10 @@ import React from 'react';
 import {NavLink, Link} from 'react-router-dom'
 import '../styles/Header.scss'
 import {BsSearch} from 'react-icons/bs'
+import { MdFavorite } from "react-icons/md";
+import { BsHeart } from "react-icons/bs";
+import {RiUser3Line} from 'react-icons/ri'
+import {HiOutlineShoppingBag} from 'react-icons/hi'
 
 
 const Header = () => {
@@ -21,12 +25,15 @@ const Header = () => {
                 <nav className="top-right">
                     <ul>
                         <li>
+                            <span><RiUser3Line/></span>
                             <NavLink to="fake/:signIn">Sign in</NavLink>
                         </li>
                         <li>
+                            <span><BsHeart/></span>
                             <NavLink to="fake/:Favorites">Favorites</NavLink>
                         </li>
                         <li>
+                            <span><HiOutlineShoppingBag/></span>
                             <NavLink to="fake/:shoppingBag">Shopping Bag</NavLink>
                         </li>
                     </ul>
@@ -52,16 +59,18 @@ const Header = () => {
                         <NavLink to="/home">H&M HOME</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/sale">Sale</NavLink>
+                        <NavLink to="fake/:sale">Sale</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/sustainability">Sustainability</NavLink>
+                        <NavLink to="fake/:sustainability">Sustainability</NavLink>
                     </li>
 
                     </ul>
                 </nav>
                 <div className="search">
-                    <span><BsSearch/></span>Search products
+                    <span><BsSearch/></span>
+                    {/* <u>Search products<u> */}
+                    <p><u>Search products</u></p>
                 </div>
 
 
