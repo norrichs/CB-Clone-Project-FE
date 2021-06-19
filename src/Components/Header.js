@@ -14,7 +14,7 @@ const Header = () => {
                 <nav className="top-left">
                     <ul>
                         <li><Link to="/customer-service">Customer Service</Link></li>
-                        <li><Link to="/student-discount">Student Discount</Link></li>
+                        <li><Link to="/sale/student-discount">Student Discount</Link></li>
                         <li><Link to="/store-locator">Find a store</Link></li>
                         <li>...</li>
                     </ul>
@@ -26,43 +26,43 @@ const Header = () => {
                     <ul>
                         <li>
                             <span><RiUser3Line/></span>
-                            <NavLink to="fake/:signIn">Sign in</NavLink>
+                            <NavLink to="/fake/:signIn">Sign in</NavLink>
                         </li>
                         <li>
                             <span><BsHeart/></span>
-                            <NavLink to="fake/:Favorites">Favorites</NavLink>
+                            <NavLink to="/fake/:Favorites">Favorites</NavLink>
                         </li>
                         <li>
                             <span><HiOutlineShoppingBag/></span>
-                            <NavLink to="fake/:shoppingBag">Shopping Bag</NavLink>
+                            <NavLink to="/fake/:shoppingBag">Shopping Bag</NavLink>
                         </li>
                     </ul>
                 </nav>
                 <nav className="middle-nav">
                     <ul>
                     <li>
-                        <NavLink to="/women">Women</NavLink>
+                        <NavLink to="/product/women">Women</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/divided">Divided</NavLink>
+                        <NavLink to="/product/divided">Divided</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/men">Men</NavLink>
+                        <NavLink to="/product/men">Men</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/baby">Baby</NavLink>
+                        <NavLink to="/product/baby">Baby</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/kids">Kids</NavLink>
+                        <NavLink to="/product/kids">Kids</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/home">H&M HOME</NavLink>
+                        <NavLink to="/product/hmhome">H&M HOME</NavLink>
                     </li>
                     <li>
-                        <NavLink to="fake/:sale">Sale</NavLink>
+                        <NavLink to="/fake/:sale">Sale</NavLink>
                     </li>
                     <li>
-                        <NavLink to="fake/:sustainability">Sustainability</NavLink>
+                        <NavLink to="/fake/:sustainability">Sustainability</NavLink>
                     </li>
 
                     </ul>
