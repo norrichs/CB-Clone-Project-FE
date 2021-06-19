@@ -51,13 +51,18 @@
 
 
 header.header-main-top{
+	// border: 2px solid red;
 	height: $headerHeight-desktop;
 }
 header nav{
-	background-color: lemonchiffon;
+	// border: 2px solid red;
+	// background-color: lemonchiffon;
 }
-header div{
-	background-color: lightcyan;
+.logo-bc {
+	// background-color: lightcyan;
+	// border: 2px solid hotpink;
+	position: relative;
+	top: 50px;
 }
 header.header-main-top{
 	display: grid;
@@ -80,7 +85,6 @@ header.header-main-top{
 			align-items: center;
 			font-size: .75em;
 			gap: 20px;
-
 		}
 	}
 	.logo-bc{
@@ -123,10 +127,17 @@ header.header-main-top{
 		}
 	}
 	.search{
+		// border: 2px solid red;
 		grid-row: 2/3;
 		grid-column: 5/6;
 		display: flex;
-		flex-direction: row;
 		justify-content: flex-end;
+		align-items: center;
+		font-size: .7em;
+		margin: 0 10px 0 0;
+	}
+	& span {
+		margin: 0 10px 0 0;
+		font-size: 1.3em;
 	}
 }

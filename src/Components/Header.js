@@ -1,6 +1,8 @@
 import React from 'react'; 
 import {NavLink, Link} from 'react-router-dom'
 import '../styles/Header.scss'
+import {BsSearch} from 'react-icons/bs'
+
 
 const Header = () => {
     return (
@@ -13,17 +15,19 @@ const Header = () => {
                         <li>...</li>
                     </ul>
                 </nav>
-                <div className='logo-bc'>Logo</div>
+                <div className='logo-bc'>
+                    <NavLink to='/'><img src="https://res.cloudinary.com/dhad6e9gj/image/upload/v1623858729/HM_Site_Project/customLogo_RED_med-03_celm0k.png"/></NavLink>
+                </div>
                 <nav className="top-right">
                     <ul>
                         <li>
-                            <div>Sign in</div>
+                            <NavLink to="fake/:signIn">Sign in</NavLink>
                         </li>
                         <li>
-                            <div>Favorites</div>
+                            <NavLink to="fake/:Favorites">Favorites</NavLink>
                         </li>
                         <li>
-                            <div>Shopping Bag</div>
+                            <NavLink to="fake/:shoppingBag">Shopping Bag</NavLink>
                         </li>
                     </ul>
                 </nav>
@@ -57,7 +61,7 @@ const Header = () => {
                     </ul>
                 </nav>
                 <div className="search">
-                    Search products
+                    <span><BsSearch/></span>Search products
                 </div>
 
 
