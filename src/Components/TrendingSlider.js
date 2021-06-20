@@ -5,7 +5,7 @@ import {NavLink} from 'react-router-dom'
 
 
 const TrendingSlider = () => {
-    const trendingImages = [
+    const trendingImagesArray = [
         "https://bc-clone-images.s3.us-east-2.amazonaws.com/group/women_basics_tops_Ribbed-Crop-Top_00.jpg", 
     
         "https://bc-clone-images.s3.us-east-2.amazonaws.com/group/women_shirts-blouses_tunics_Voluminous-Poplin-Tunic_00.jpg", 
@@ -41,15 +41,15 @@ const TrendingSlider = () => {
     let [randomImage, setRandomImage] = useState(null) 
     
     const getRandomImage = () => {
-        let randomImage = trendingImages[ Math.floor(Math.random() * trendingImages.length)]
-        console.log('testing', randomImage)
+        let randomImage = trendingImagesArray[ Math.floor(Math.random() * trendingImagesArray.length)]
+        // console.log('checking if random image works', randomImage)
         return randomImage
     }
-    
+        
     
     useEffect( () => {setRandomImage(getRandomImage())},[])
+
     return (
-            
         <div className="trending-container-heading">
             <h3>Trending right now</h3>
 
@@ -57,7 +57,8 @@ const TrendingSlider = () => {
 
             <div className="trending-single-image-container">
                 <div className="trending-image">
-                   <NavLink to="fake/:womenClassic"><img src="https://bc-clone-images.s3.us-east-2.amazonaws.com/group/women_basics_tops_Ribbed-Crop-Top_00.jpg"/></NavLink>
+                   {/* <NavLink to="fake/:womenClassic"><img src="https://bc-clone-images.s3.us-east-2.amazonaws.com/group/women_basics_tops_Ribbed-Crop-Top_00.jpg"/></NavLink> */}
+                   <NavLink to="fake/:womenClassic"><img src={randomImage}/></NavLink>
                 </div>
                 <div className="trending-image-copy">
                     <p>Women</p>
