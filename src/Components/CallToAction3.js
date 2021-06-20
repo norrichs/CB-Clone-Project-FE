@@ -1,5 +1,7 @@
 import '../styles/CallToAction3.scss'
 import {AiOutlineInfoCircle} from 'react-icons/ai'
+import { NavLink } from 'react-router-dom'
+
 
 const CallToAction3 = () => {
     return (
@@ -12,7 +14,7 @@ const CallToAction3 = () => {
                 </article>
             </div>
             <div id="call-to-action-button-container">
-                <button id="call-to-action-button">APPLY NOW</button>
+               <NavLink to="fake/:applyNow"><button id="call-to-action-button">APPLY NOW</button></NavLink>
             </div>
         </div>
     )
