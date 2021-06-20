@@ -18,8 +18,7 @@ import Detail from "./Pages/Detail";
 
 function App() {
 	const awsURL = "https://ccexp5wwrk.execute-api.us-east-2.amazonaws.com/dev";
-	const imgBaseURL =
-		"https://bc-clone-images.s3.us-east-2.amazonaws.com/group/";
+	const imgBaseURL ="https://bc-clone-images.s3.us-east-2.amazonaws.com/group/";
 
 	// const [audience, setAudience] = React.useState([]);
 	// const [category, setCategory] = React.useState([]);
@@ -68,7 +67,7 @@ function App() {
 			<Switch>
 				{/* may not need the routerProps in the the render prop */}
 				<Route exact path="/">
-					<Splash />
+					<Splash awsURL={awsURL} imgBaseURL={imgBaseURL}/>
 				</Route>
 				<Route exact path="/product/:audience">
 					<Main awsURL={awsURL} imgBaseURL={imgBaseURL} />

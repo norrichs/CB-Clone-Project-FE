@@ -8,17 +8,15 @@ import ProductCard from "../Components/ProductCard";
 import '../styles/Main.scss'
 
 
-// console.log('test');
-
 const Main = ({ awsURL, imgBaseURL }, props) => {
 	// console.log('this is the props', props)
 	// console.log('awsurl', awsURL)
 	// console.log("these are the params", useParams());
-	console.log('raw main params', useParams())
+	// console.log('raw main params', useParams())
 	const { audience, category, group } = useParams();
 	console.log('Main.js params', audience, category, group)
 	const location = useLocation()
-	console.log('location object', location)
+	// console.log('location object', location)
 	const [contentDisplay, setContentDisplay] = React.useState([])
 	
 	// console.log(awsURL + "/product/" + audience + "/" + category + "/" + group)
@@ -30,9 +28,9 @@ const Main = ({ awsURL, imgBaseURL }, props) => {
 				return res.json()
 			})
 			.then((data)=>{
-				// console.log('got data', data)
+				console.log('got data', data)
 				setContentDisplay(data.body.Items.map((pFam, i)=> {
-					console.log('setContentDisplay product family data: ', pFam)
+					// console.log('setContentDisplay product family data: ', pFam)
 					return (<ProductCard 
 						key={i}
 						imgBaseURL={imgBaseURL} 
@@ -52,7 +50,7 @@ const Main = ({ awsURL, imgBaseURL }, props) => {
 			})
 	}
 	const getProductFamiliesForCategory = async () => {
-		console.log('fetching: ' + awsURL + "/product/" + audience + "/" + category + "/")
+		// console.log('fetching: ' + awsURL + "/product/" + audience + "/" + category + "/")
 		fetch(awsURL + "/product/" + audience + "/" + category + "/")
 			.then((res) => {
 				// console.log('get families response', res)
@@ -61,7 +59,7 @@ const Main = ({ awsURL, imgBaseURL }, props) => {
 			.then((data)=>{
 				// console.log('got data', data)
 				setContentDisplay(data.body.Items.map((pFam, i)=> {
-					console.log('setContentDisplay product family data: ', pFam)
+					// console.log('setContentDisplay product family data: ', pFam)
 					return (<ProductCard 
 						key={i}
 						imgBaseURL={imgBaseURL} 
