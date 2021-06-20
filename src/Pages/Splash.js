@@ -10,8 +10,8 @@ import SplashCard3 from '../Components/SplashCard3';
 const Splash = ({awsURL, imgBaseURL}, props) => {
 return (
     <div>
-        <TrendingSlider/>
         <CallToAction1/>
+        <TrendingSlider/>
         <SplashCard1 awsURL={awsURL} imgBaseURL={imgBaseURL}/>
         <CallToAction2/>
         <SplashCard2 awsURL={awsURL} imgBaseURL={imgBaseURL}/>

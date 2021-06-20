@@ -1,5 +1,6 @@
 import React from 'react'
 import '../styles/SplashCard3.scss'
+import { NavLink } from 'react-router-dom'
 
 const SplashCard3 = () => {
 
@@ -16,7 +17,7 @@ const SplashCard3 = () => {
                     <p>A limited-edition collection of handmade decor</p>
                 </div>
                 <div className="splash-card2-button">
-                    <button>SHOP NOW</button>
+                    <NavLink to="fake/:shopNow"><button>SHOP NOW</button></NavLink>
                 </div>
 
             </div>
