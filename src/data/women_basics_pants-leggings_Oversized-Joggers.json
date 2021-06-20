@@ -1,0 +1,83 @@
+{
+	"audience": { "S": "women" },
+	"product_category": { "S": "basics" },
+	"product_group": { "S": "pants-leggings" },
+	"product_family": { "S": "Oversized Joggers" },
+	"price": { "N": "45.95" },
+	"price_sale": { "N": "55" },
+	"altText": {
+		"L": [{ "S": "Oversized JoggersModel" }, { "S": "Oversized Joggers" }]
+	},
+	"swatchColors": { "L": [] },
+	"images": {
+		"L": [
+			{ "S": "women_basics_pants-leggings_Oversized-Joggers_00.jpg" },
+			{ "S": "women_basics_pants-leggings_Oversized-Joggers_01.jpg" }
+		]
+	},
+	"items": { "L": [] },
+	"a_c": { "S": "women_basics" },
+	"g_f": { "S": "pants-leggings_Oversized-Joggers" },
+	"copy_desc": {
+		"S": "Oversized sweatpant joggers in soft fabric. High waist, elasticized waistband with concealed drawstring, and side pockets. Legs with stitched creases at front and elasticized hems. Soft, brushed inside."
+	},
+	"sizes": {
+		"L": [
+			{ "S": "XXS" },
+			{ "S": "XS" },
+			{ "S": "S" },
+			{ "S": "M" },
+			{ "S": "L" },
+			{ "S": "XL" },
+			{ "S": "XXL" }
+		]
+	},
+	"copy_list": {
+		"L": [
+			{
+				"title": { "S": "Size" },
+				"copy": { "S": "The model is 173cm/5'8\" and wears a size S" }
+			},
+			{ "title": { "S": "Fit" }, "copy": { "S": "Oversized" } },
+			{
+				"title": { "S": "Composition" },
+				"copy": {
+					"S": "Shell: Cotton 60%, Polyester 40%Pocket lining: Cotton 100%"
+				}
+			},
+			{ "title": { "S": "Art. No." }, "copy": { "S": "0920406001" } }
+		]
+	},
+	"detail_images": {
+		"L": [
+			{
+				"S": "women_basics_pants-leggings_Oversized-Joggers-dp0.jpg"
+			},
+			{
+				"S": "women_basics_pants-leggings_Oversized-Joggers-dp1.jpg"
+			},
+			{
+				"S": "women_basics_pants-leggings_Oversized-Joggers-dp2.jpg"
+			},
+			{
+				"S": "women_basics_pants-leggings_Oversized-Joggers-dp3.jpg"
+			},
+			{
+				"S": "women_basics_pants-leggings_Oversized-Joggers-dp4.jpg"
+			}
+		]
+	},
+	"thumb_images": {
+		"L": [
+			{
+				"S": "women_basics_pants-leggings_Oversized-Joggers-dp0.jpg"
+			},
+			{
+				"S": "women_basics_pants-leggings_Oversized-Joggers-dp1.jpg"
+			},
+			{
+				"S": "women_basics_pants-leggings_Oversized-Joggers-dp2.jpg"
+			}
+		]
+	}
+}

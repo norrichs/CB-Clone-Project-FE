@@ -26,18 +26,11 @@ function App() {
 	// const [group, setGroup] = React.useState([]);
 	// const [bag, setBag] = React.useState([])
 	// const [showExpandableHeader, setShowExpandableHeader] = React.useState(false)
-	
-	
-	//////// Dummy Data ////////////////
-	const [dummyDetail, setDummyDetail] = React.useState();
-	const transformResponse = require('./data/transformResponse')
-	const dummyData = require('./data/dummyDetailData.json')
-	////////////////////////////////////
 
-
+	
 	////////// CRUD FUNCTIONS HERE ///////////////
 	// const getProduct = () => {
-	//   fetch(url)
+		//   fetch(url)
 	//   .then( (response) => response.json() )
 	//   .then((data) => setProduct(data.body))
 	//   console.log(url)
@@ -49,20 +42,18 @@ function App() {
 	//   console.log('this is the data', data)
 	//   setAudience(data)
 	// }
-
+	
 	// const getCategory = async () => {
-	//   const response = await fetch(url + '/:')
-	//   console.log(response)
-	//   const data = await response.json()
-	//   console.log('this is the data', data)
-	//   setCategory(data)
-	// }
-	// const revealExpandableHeader = () => {}
-	React.useEffect(()=>{
-		setDummyDetail(transformResponse(dummyData))
-	},[])
-	return (
-		<div className="App">
+		//   const response = await fetch(url + '/:')
+		//   console.log(response)
+		//   const data = await response.json()
+		//   console.log('this is the data', data)
+		//   setCategory(data)
+		// }
+		// const revealExpandableHeader = () => {}
+
+		return (
+			<div className="App">
 			<Header />
 			<ExpandableHeader />
 			<Switch>
@@ -82,7 +73,7 @@ function App() {
 				</Route>
 
 				<Route exact path="/detail">
-					<Detail data={dummyDetail}/>
+					<Detail />
 				</Route>
 
 				<Route exact path="/bag">

@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from 'react-router-dom';
 import { GiPlainCircle } from "react-icons/gi";
 import { MdFavorite } from "react-icons/md";
 
@@ -22,15 +23,17 @@ const ProductCard = ({ pFam, imgBaseURL}) => {
 
     return (
 		<div className="card-container">
-			<div className="card-image-container">
-				<img
-                    onMouseOver={e => e.target.setAttribute('src', imgBaseURL + pFam.image1)}
-                    onMouseOut ={e => e.target.setAttribute('src',imgBaseURL + pFam.image0)}
-					alt={pFam.alt0}
-					className="card-image"
-					src={imgBaseURL + pFam.image0}
-				/>
-			</div>
+			<Link to="/detail">
+				<div className="card-image-container">
+					<img
+									onMouseOver={e => e.target.setAttribute('src', imgBaseURL + pFam.image1)}
+									onMouseOut ={e => e.target.setAttribute('src',imgBaseURL + pFam.image0)}
+						alt={pFam.alt0}
+						className="card-image"
+						src={imgBaseURL + pFam.image0}
+					/>
+				</div>
+			</Link>
 			<div id="card-info">
 				<div id="card-product-name">
 					<article>{pFam.label}</article>
