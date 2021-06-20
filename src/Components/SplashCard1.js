@@ -1,6 +1,7 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import '../styles/SplashCard1.scss'
+import { NavLink } from 'react-router-dom'
 
 
 
@@ -43,7 +44,7 @@ const SplashCard1 = ({awsURL, imgBaseURL}, props) => {
                     <p>Add a healthy dose of vitiman D with mood-lifting yellow</p>
                 </div>
                 <div className="splash-card1-button">
-                    <button>SHOP NOW</button>
+                   <NavLink to="fake/:shopNow"><button>SHOP NOW</button></NavLink>
                 </div>
 
             </div>
