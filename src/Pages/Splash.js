@@ -4,6 +4,7 @@ import CallToAction2 from "../Components/CallToAction2";
 import CallToAction3 from "../Components/CallToAction3";
 import TrendingSlider from '../Components/TrendingSlider';
 import SplashCard1 from '../Components/SplashCard1';
+import SplashCard2 from '../Components/SplashCard2';
 
 const Splash = ({awsURL, imgBaseURL}, props) => {
 return (
@@ -12,7 +13,7 @@ return (
         <CallToAction1/>
         <SplashCard1 awsURL={awsURL} imgBaseURL={imgBaseURL}/>
         <CallToAction2/>
-        <SplashCard1 awsURL={awsURL} imgBaseURL={imgBaseURL}/>
+        <SplashCard2 awsURL={awsURL} imgBaseURL={imgBaseURL}/>
         <CallToAction3/>
         <SplashCard1 awsURL={awsURL} imgBaseURL={imgBaseURL}/>
     </div>
