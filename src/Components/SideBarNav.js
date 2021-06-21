@@ -4,7 +4,7 @@ import "../styles/SideBarNav.scss";
 let tree = require("../data/manifestTree.json");
 
 const SideBarNav = (props) => {
-	// console.log("Sidebar Nav data tree:",tree);
+	console.log("Sidebar Nav data tree:",tree);
 	const params = useParams();
 
 	// Map over json manifestTree to build sidebar nav menu
@@ -62,7 +62,7 @@ const SideBarNav = (props) => {
 			return null
 		}
 	});
-// console.log('this is the sbn', sbn)
+
 	return (
 		<nav className="sidebar-nav">
 			<h2>New Arrivals</h2>

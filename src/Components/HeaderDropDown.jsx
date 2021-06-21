@@ -18,9 +18,8 @@ const HeaderDropDown = (props) => {
 							if (category.category === params.category) {
 								return (
 									<li key={i}>
-										<NavLink
-											to={`/product/${audience.audience}/${category.category}`}
-										>
+										<NavLink to={`/product/${audience.audience}/${category.category}`}
+                                        >
 											{category.label}
 										</NavLink>
 										<ul>
@@ -30,10 +29,7 @@ const HeaderDropDown = (props) => {
 													className="header-nav-group"
 													key={i}
 													>
-														<NavLink
-														to={`/product/${audience.audience}/${category.category}/${group.group}`}
-														activeClassName={"active-navlink"}
-														>
+														<NavLink to={`/product/${audience.audience}/${category.category}/${group.group}`} activeClassName={"active-navlink"}>
 															{group.label}
 														</NavLink>
 													</li>
@@ -154,12 +150,163 @@ const HeaderDropDown = (props) => {
 
 
 
+
+
+
+
+
+
             <div className="category-column">
                 <div className="header-group">
                     <h2>Shop by Category</h2>
                     {hdd}
+                    <ul>
+                        <li>
+                            <NavLink activeClassName={"active-navlink"} to="/women/dresses">
+                                Dresses
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink activeClassName={"active-navlink"} to="/women/tops">
+                                Tops
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink activeClassName={"active-navlink"} to="/women/shirts-blouses">
+                                Shirts & Blouses
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink activeClassName={"active-navlink"} to="/women/pants">
+                                Pants
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink activeClassName={"active-navlink"} to="/women/cardigans-sweaters">
+                                Jeans
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink activeClassName={"active-navlink"} to="/women/tops">
+                                Cardigans & Sweaters
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink activeClassName={"active-navlink"} to="/women/hoodies-sweatshirts">
+                                Hoodies & Sweatshirts
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink activeClassName={"active-navlink"} to="/women/basics">
+                                Basics
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink activeClassName={"active-navlink"} to="/women/blazers">
+                                Blazers
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink activeClassName={"active-navlink"} to="/women/jackets-coats">
+                                Jackets & Coats
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink activeClassName={"active-navlink"} to="/women/shoes">
+                                Shoes
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink activeClassName={"active-navlink"} to="/women/sportswear">
+                                Sportswear
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink activeClassName={"active-navlink"} to="/women/jumpsuits-rompers">
+                                Jumpsuits & Rompers
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink activeClassName={"active-navlink"} to="/women/swimwear">
+                                Swimwear & Beachwear
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink activeClassName={"active-navlink"} to="/women/skirts">
+                                Skirts
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink activeClassName={"active-navlink"} to="/women/shorts">
+                                Shorts
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink activeClassName={"active-navlink"} to="/women/accessories">
+                                Accessories
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink activeClassName={"active-navlink"} to="/women/lingerie">
+                                Lingerie
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink activeClassName={"active-navlink"} to="/women/socks-tights">
+                                Socks & Tights
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink activeClassName={"active-navlink"} to="/women/maternity-cloths">
+                                Maternity Wear
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink activeClassName={"active-navlink"} to="/women/plus-size">
+                                Plus Sizes
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink activeClassName={"active-navlink"} to="/women/beauty">
+                                Beauty
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink activeClassName={"active-navlink"} to="/women/petite">
+                                Petite Size
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink activeClassName={"active-navlink"} to="/women/loungewear">
+                                Loungewear
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink activeClassName={"active-navlink"} to="/women/sleepwear">
+                                Sleepwear & Loungewear
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink activeClassName={"active-navlink"} to="/women/premium-selection">
+                                Premium Selection
+                            </NavLink>
+                        </li>
+                    </ul>
                 </div>
             </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

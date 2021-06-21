@@ -6,6 +6,10 @@ $navbarindent: 10px;
 // 	box-sizing: border-box;
 // 	// border: 1px solid grey !important;
 // }
+.hidden {
+    display: none;
+    background: aquamarine;
+}
 
 .header-nav {
     // border: 2px solid red;
@@ -33,6 +37,7 @@ $navbarindent: 10px;
     // border: 2px solid red;
     color: black;
     font-weight: 500;
+    font-size: .8em;
 	margin-bottom: 10px;
 }
 
