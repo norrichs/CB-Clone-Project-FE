@@ -62,7 +62,7 @@ const SideBarNav = (props) => {
 			return null
 		}
 	});
-
+// console.log('this is the sbn', sbn)
 	return (
 		<nav className="sidebar-nav">
 			<h2>New Arrivals</h2>
