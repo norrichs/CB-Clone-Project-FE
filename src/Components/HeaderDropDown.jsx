@@ -1,6 +1,7 @@
 import React from 'react'
 import { NavLink, useParams } from 'react-router-dom'
 import "../styles/HeaderDropDown.scss"
+import {useState} from 'react'
 
 
 let tree = require("../data/manifestTree.json");
@@ -8,56 +9,63 @@ let tree = require("../data/manifestTree.json");
 const HeaderDropDown = (props) => {
     // console.log('sidebar nav data',tree )
     const params = useParams()
-    // Mapping over json manifestTree.json (file)
-    const hdd = tree.map((audience, i) => {
-		if(audience.audience === params.audience){
-			return (
-				<li key={i}>
-					<ul>
-						{audience.categories.map((category, i) => {
-							if (category.category === params.category) {
-								return (
-									<li key={i}>
-										<NavLink to={`/product/${audience.audience}/${category.category}`}
-                                        >
-											{category.label}
-										</NavLink>
-										<ul>
-											{category.groups.map((group, i) => {
-												return (
-													<li
-													className="header-nav-group"
-													key={i}
-													>
-														<NavLink to={`/product/${audience.audience}/${category.category}/${group.group}`} activeClassName={"active-navlink"}>
-															{group.label}
-														</NavLink>
-													</li>
-												);
-											})}
-										</ul>
-									</li>
-								);
-							} else {
-								return (
-									<li key={i}>
-										<NavLink
-											to={`/product/${audience.audience}/${category.category}`}
-										>
-											{category.label}
-										</NavLink>
-									</li>
-								);
-							}
-						})}
-					</ul>
-				</li>
-			);
-		}else{
-			return null
-		}
-	});
 
+    const [isShown, setIsShown] = useState(false)
+
+
+    // Mapping over json manifestTree.json (file)
+    // const hdd = tree.map((audience, i) => {
+	// 	if(audience.audience === params.audience){
+	// 		return (
+	// 			<li key={i}>
+	// 				<ul>
+	// 					{audience.categories.map((category, i) => {
+	// 						if (category.category === params.category) {
+	// 							return (
+	// 								<li key={i}>
+	// 									<NavLink to={`/product/${audience.audience}/${category.category}`}
+    //                                     >
+	// 										{category.label}
+	// 									</NavLink>
+	// 									<ul>
+	// 										{category.groups.map((group, i) => {
+	// 											return (
+	// 												<li
+	// 												className="header-nav-group"
+	// 												key={i}
+	// 												>
+	// 													<NavLink to={`/product/${audience.audience}/${category.category}/${group.group}`} activeClassName={"active-navlink"}>
+	// 														{group.label}
+	// 													</NavLink>
+	// 												</li>
+	// 											);
+	// 										})}
+	// 									</ul>
+	// 								</li>
+	// 							);
+	// 						} else {
+	// 							return (
+	// 								<li key={i}>
+	// 									<NavLink
+	// 										to={`/product/${audience.audience}/${category.category}`}
+	// 									>
+	// 										{category.label}
+	// 									</NavLink>
+	// 								</li>
+	// 							);
+	// 						}
+	// 					})}
+	// 				</ul>
+	// 			</li>
+	// 		);
+	// 	}else{
+	// 		return null
+	// 	}
+	// });
+
+    
+    
+    // onMouseOver
     return (
 		<nav className="header-nav">
             <div className="category-column">
@@ -156,13 +164,13 @@ const HeaderDropDown = (props) => {
 
 
 
-            <div className="category-column">
+            <div className="category-column" >
                 <div className="header-group">
                     <h2>Shop by Category</h2>
-                    {hdd}
+                    {/* {hdd} */}
                     <ul>
                         <li>
-                            <NavLink activeClassName={"active-navlink"} to="/women/dresses">
+                            <NavLink activeClassName={"active-navlink"} to="/product/women/dresses">
                                 Dresses
                             </NavLink>
                         </li>

@@ -4,6 +4,8 @@ import "./styles/ProductCardStyling.scss";
 import "./styles/BottomNav.scss";
 import { Route, Switch } from "react-router-dom";
 
+import HeaderDropDown from "./Components/HeaderDropDown";
+
 /////////////// COMPONENTS BELOW /////////////////////
 import Header from "./Components/Header";
 import ExpandableHeader from "./Components/ExpandableHeader";
@@ -54,6 +56,7 @@ function App() {
 		return (
 			<div className="App">
 			<Header />
+			<HeaderDropDown/>
 			<ExpandableHeader />
 			<Switch>
 				{/* may not need the routerProps in the the render prop */}

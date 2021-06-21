@@ -65,10 +65,13 @@ header nav{
 	top: 70px;
 }
 header.header-main-top{
+	border: 2px solid red;
+	background: white;
 	display: grid;
 	grid-template-rows: 1fr 1fr;
 	grid-template-columns: 1fr 3fr 100px 3fr 1fr;
 	gap: 10px;
+	z-index: 10;
 	
 	.top-left{
 		// border: 2px solid red;

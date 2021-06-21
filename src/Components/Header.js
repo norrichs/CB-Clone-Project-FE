@@ -6,7 +6,8 @@ import { MdFavorite } from "react-icons/md";
 import { BsHeart } from "react-icons/bs";
 import {RiUser3Line} from 'react-icons/ri'
 import {HiOutlineShoppingBag} from 'react-icons/hi'
-import {BiCircle} from 'react-icons/bi'
+import {BiCircle} from 'react-icons/bi' 
+import HeaderDropDown from './HeaderDropDown';
 
 
 const Header = () => {
@@ -76,13 +77,6 @@ const Header = () => {
                     {/* <u>Search products<u> */}
                     <p><u>Search products</u></p>
                 </div>
-
-
-
-
-
-
-
             <section className='header-center'>
             </section>
             <section className='header-right'>
