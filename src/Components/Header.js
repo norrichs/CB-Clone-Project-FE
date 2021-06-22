@@ -16,29 +16,19 @@ const Header = () => {
 
 
     // THIS IS ME TESTING / TRYING TO GET DROPDOWN TO HIDE/SHOW
-    // const [isSwitchOn, setIsSwitchOn] = useState(".hidden")
+    const [showClass, setShowClass] = useState("hidden")
     
-    
-    // const handleShowMenu = (() => {
-    //     // const dropDown = document.getElementsByClassName('header-nav')
-    //     // dropDown.className.add('move-down')
-    //     // setIsSwitchOn(true)
-    //     setIsSwitchOn('not hidden>>?')
-    //     console.log('testing the button')
-        
-    // }) 
+    const handleShowMenu = (() => {
+        console.log('show')
+        setShowClass('shown')   
+    }) 
 
-    // function Testing(event) {
-    //     console.log('asd;lfkasdf;lakjs')
-    //     const testRef = useRef(null)
-    //     return (
-    //         <div ref = {myRef}>
-                
-    //         </div>
-    //     )
-      
-    // }
-    // Testing()
+    const handleHideMenu = (() => {
+        setShowClass('hidden')
+        console.log('hide')
+    })
+
+  
 
 
 
@@ -76,41 +66,44 @@ const Header = () => {
                 </nav>
                 <nav className="middle-nav">
                     <ul>
-
-                        
-                    
-
-                    {/* <li > */}
-                    {/* <li onMouseOver={handleShowMenu} > */}
-                    <li>
+                    <li 
+                    onMouseEnter={handleShowMenu} 
+                    onMouseLeave={handleHideMenu}>
                         <NavLink to="/product/women">Women</NavLink>
                     </li>
-                    {/* <button onClick={showMenu}></button> */}
-                    
-
-
-
-
-
-                    <li>
+                    <li 
+                    onMouseEnter={handleShowMenu} 
+                    onMouseLeave={handleHideMenu}>
                         <NavLink to="/product/divided">Divided</NavLink>
                     </li>
-                    <li>
+                    <li 
+                    onMouseEnter={handleShowMenu} 
+                    onMouseLeave={handleHideMenu}>
                         <NavLink to="/product/men">Men</NavLink>
                     </li>
-                    <li>
+                    <li 
+                    onMouseEnter={handleShowMenu} 
+                    onMouseLeave={handleHideMenu}>
                         <NavLink to="/product/baby">Baby</NavLink>
                     </li>
-                    <li>
+                    <li 
+                    onMouseEnter={handleShowMenu} 
+                    onMouseLeave={handleHideMenu}>
                         <NavLink to="/product/kids">Kids</NavLink>
                     </li>
-                    <li>
+                    <li 
+                    onMouseEnter={handleShowMenu} 
+                    onMouseLeave={handleHideMenu}>
                         <NavLink to="/product/hmhome">H&M HOME</NavLink>
                     </li>
-                    <li>
+                    <li 
+                    onMouseEnter={handleShowMenu} 
+                    onMouseLeave={handleHideMenu}>
                         <NavLink to="/fake/:sale">Sale</NavLink>
                     </li>
-                    <li>
+                    <li 
+                    onMouseEnter={handleShowMenu} 
+                    onMouseLeave={handleHideMenu}>
                         <NavLink to="/fake/:sustainability">Sustainability</NavLink>
                     </li>
 
@@ -126,7 +119,7 @@ const Header = () => {
             <section className='header-right'>
                 
             </section>
-            <HeaderDropDown/>
+            <HeaderDropDown showClass={showClass}/>
         </header>
     )
 

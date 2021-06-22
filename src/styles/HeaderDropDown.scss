@@ -11,38 +11,24 @@ $navbarindent: 10px;
 .header-nav {
     // border: 2px solid red;
     background: white;
-    background: aquamarine;
+    // background: aquamarine;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     // height: 500px;
-    
-    
-    // This is for the hidden drop down menu. Currently hidden
     position: absolute;
-    // top: $headerHeight-desktop - 75px;
     left: 0;
     right: 0;
-    // z-index: -1;
+    z-index: -1;
     border-bottom: 5px solid black;
     // transform: translateY(-195px)
 }
 
 
-
-
-.move-down{
-    transform: translateY(450px)
-}
-
-
-
-
-
 .category-column {
     // border: 2px solid green;
-    width: 250px;
-    padding: 0 0 0 15px;
+    // width: 250px;
+    padding: 30px 0 0 15px;
 }
 
 .header-group {
@@ -72,10 +58,13 @@ $navbarindent: 10px;
 
 // This is for the hidden drop down menu. Currently hidden
 .hidden {
-    display: none;
-    // background: purple;
+    transform: translateY(-230px)
 }
 
+.shown {
+    z-index: 1;
+    transform: translateY(155px)
+}
 
 
 
