@@ -1,4 +1,5 @@
 import React from 'react'; 
+import { css } from '@emotion/css'
 import {NavLink, Link} from 'react-router-dom'
 import '../styles/Header.scss'
 import {BsSearch} from 'react-icons/bs'
@@ -7,10 +8,41 @@ import { BsHeart } from "react-icons/bs";
 import {RiUser3Line} from 'react-icons/ri'
 import {HiOutlineShoppingBag} from 'react-icons/hi'
 import {BiCircle} from 'react-icons/bi' 
+import { useState } from 'react';
 import HeaderDropDown from './HeaderDropDown';
+import { useRef } from 'react';
 
 
 const Header = () => {
+
+
+    // THIS IS ME TESTING / TRYING TO GET DROPDOWN TO HIDE/SHOW
+    // const [isSwitchOn, setIsSwitchOn] = useState(".hidden")
+    
+    
+    // const handleShowMenu = (() => {
+    //     // const dropDown = document.getElementsByClassName('header-nav')
+    //     // dropDown.className.add('move-down')
+    //     // setIsSwitchOn(true)
+    //     setIsSwitchOn('not hidden>>?')
+    //     console.log('testing the button')
+        
+    // }) 
+
+    // function Testing(event) {
+    //     console.log('asd;lfkasdf;lakjs')
+    //     const testRef = useRef(null)
+    //     return (
+    //         <div ref = {myRef}>
+                
+    //         </div>
+    //     )
+      
+    // }
+    // Testing()
+
+
+
     return (
         <header className="header-main-top">
                 <nav className="top-left">
@@ -45,9 +77,22 @@ const Header = () => {
                 </nav>
                 <nav className="middle-nav">
                     <ul>
+
+                        
+                    
+
+                    {/* <li > */}
+                    {/* <li onMouseOver={handleShowMenu} > */}
                     <li>
                         <NavLink to="/product/women">Women</NavLink>
                     </li>
+                    {/* <button onClick={showMenu}></button> */}
+                    
+
+
+
+
+
                     <li>
                         <NavLink to="/product/divided">Divided</NavLink>
                     </li>
@@ -82,8 +127,10 @@ const Header = () => {
             <section className='header-right'>
                 
             </section>
+            <HeaderDropDown/>
         </header>
     )
+
 }
 
 export default Header;

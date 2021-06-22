@@ -6,29 +6,39 @@ $navbarindent: 10px;
 // 	box-sizing: border-box;
 // 	// border: 1px solid grey !important;
 // }
-// .hidden {
-//     display: none;
-//     background: aquamarine;
-// }
+
 
 .header-nav {
     // border: 2px solid red;
     background: white;
     background: aquamarine;
-    // margin: 0 auto;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     // height: 500px;
+    
+    
+    // This is for the hidden drop down menu. Currently hidden
     position: absolute;
     // top: $headerHeight-desktop - 75px;
-
     left: 0;
     right: 0;
-    z-index: -1;
+    // z-index: -1;
     border-bottom: 5px solid black;
-    transform: translateY(-450px)
-    
+    // transform: translateY(-195px)
 }
+
+
+
+
+.move-down{
+    transform: translateY(450px)
+}
+
+
+
+
+
 .category-column {
     // border: 2px solid green;
     width: 250px;
@@ -60,47 +70,12 @@ $navbarindent: 10px;
 //     text-decoration: underline;
 // }
 
+// This is for the hidden drop down menu. Currently hidden
+.hidden {
+    display: none;
+    // background: purple;
+}
 
 
 
 
-
-// a{
-// 	color: red;
-// 	text-decoration: none;
-// }
-// a:hover{
-// 	text-decoration: underline;
-// 	color: $activeNavLink;
-// }
-// li{
-// 	list-style-type: none;
-// }
-// nav.header-nav{
-// 	font-weight: 300;
-// 	font-size: .75em;	
-// 	h2{
-// 		font-weight: 700;
-// 		margin-bottom: 10px;
-// 	}
-// 	padding-left: 24px;
-// 	// background-color: sandybrown;
-	// min-width: $sidebarWidth-desktop;
-// 	max-width: $sidebarWidth-desktop;
-// 	ul{
-// 		display: flex;
-// 		flex-direction: column;
-// 		margin-bottom: 15px;
-// 	}
-// 	nav ul{
-// 		padding-left: 0px;
-// 	}
-// 	li{
-// 		margin-bottom: 5px;
-// 	}
-// 	li.header-nav-group{ margin-left: $navbarindent}
-// }
-
-// .active-navlink{
-// 	color: $activeNavLink;
-// }

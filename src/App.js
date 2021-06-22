@@ -3,7 +3,7 @@ import "./styles/App.scss";
 import "./styles/ProductCardStyling.scss";
 import "./styles/BottomNav.scss";
 import { Route, Switch } from "react-router-dom";
-
+import { useState } from "react";
 import HeaderDropDown from "./Components/HeaderDropDown";
 
 /////////////// COMPONENTS BELOW /////////////////////
@@ -17,46 +17,21 @@ import Splash from "./Pages/Splash";
 import Bag from "./Pages/Bag";
 import Favorites from "./Pages/Favorites";
 import Detail from "./Pages/Detail";
+import { HiTranslate } from "react-icons/hi";
 
 function App() {
 	const awsURL = "https://ccexp5wwrk.execute-api.us-east-2.amazonaws.com/dev";
 	const imgBaseURL ="https://bc-clone-images.s3.us-east-2.amazonaws.com/group/";
 
-	// const [audience, setAudience] = React.useState([]);
-	// const [category, setCategory] = React.useState([]);
-	// const [group, setGroup] = React.useState([]);
-	// const [bag, setBag] = React.useState([])
-	// const [showExpandableHeader, setShowExpandableHeader] = React.useState(false)
+	
+		// const [isShown, setIsShown] = useState(false)
 
-	
-	////////// CRUD FUNCTIONS HERE ///////////////
-	// const getProduct = () => {
-		//   fetch(url)
-	//   .then( (response) => response.json() )
-	//   .then((data) => setProduct(data.body))
-	//   console.log(url)
-	// }
-	// const getAudience = async () => {
-	//   const response = await fetch(url + '/')
-	//   console.log(response)
-	//   const data = await response.json()
-	//   console.log('this is the data', data)
-	//   setAudience(data)
-	// }
-	
-	// const getCategory = async () => {
-		//   const response = await fetch(url + '/:')
-		//   console.log(response)
-		//   const data = await response.json()
-		//   console.log('this is the data', data)
-		//   setCategory(data)
-		// }
-		// const revealExpandableHeader = () => {}
+		
 
 		return (
 			<div className="App">
-			<Header />
-			<HeaderDropDown/>
+			<Header/>
+			{/* <HeaderDropDown isShown={isShown}/> */}
 			<ExpandableHeader />
 			<Switch>
 				{/* may not need the routerProps in the the render prop */}

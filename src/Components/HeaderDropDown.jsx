@@ -1,7 +1,6 @@
 import React from 'react'
 import { NavLink, useParams } from 'react-router-dom'
 import "../styles/HeaderDropDown.scss"
-import {useState} from 'react'
 
 
 let tree = require("../data/manifestTree.json");
@@ -10,7 +9,7 @@ const HeaderDropDown = (props) => {
     // console.log('sidebar nav data',tree )
     const params = useParams()
 
-    const [isShown, setIsShown] = useState(false)
+
 
 
     // Mapping over json manifestTree.json (file)
@@ -63,11 +62,18 @@ const HeaderDropDown = (props) => {
 	// 	}
 	// });
 
+    // const moveDown = () => {
+    //     const headerNav = document.getElementsByClassName('header-nav')
+    //     headerNav.classList.add('move-down')
+    //     console.log('this is the header drop down')
+    // }
+
+    // document.getElementsByClassName('header-nav').addEventListener('click', moveDown)
     
     
-    // onMouseOver
+    
     return (
-		<nav className="header-nav">
+		<nav className="header-nav hidden">
             <div className="category-column">
             <div className="header-group">
                 <h2>New Arrivals</h2>
