@@ -7,7 +7,6 @@ import ContentContainer from "../Components/ContentContainer";
 import ProductCard from "../Components/ProductCard";
 import '../styles/Main.scss'
 
-
 const Main = ({ awsURL, imgBaseURL }, props) => {
 	// console.log('this is the props', props)
 	// console.log('awsurl', awsURL)
@@ -35,6 +34,8 @@ const Main = ({ awsURL, imgBaseURL }, props) => {
 						key={i}
 						imgBaseURL={imgBaseURL} 
 						pFam={{
+							a_c: pFam.a_c,
+							g_f: pFam.g_f,
 							audience: pFam.audience,
 							category: pFam.category,
 							group: pFam.group,

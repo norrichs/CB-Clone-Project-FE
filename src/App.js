@@ -21,7 +21,9 @@ import { HiTranslate } from "react-icons/hi";
 
 function App() {
 	const awsURL = "https://ccexp5wwrk.execute-api.us-east-2.amazonaws.com/dev";
-	const imgBaseURL ="https://bc-clone-images.s3.us-east-2.amazonaws.com/group/";
+
+	const imgBaseURL = "https://bc-clone-images.s3.us-east-2.amazonaws.com/group/";
+	const pDImgBaseURL = "https://bc-clone-images.s3.us-east-2.amazonaws.com/detail/"
 
 	
 		// const [isShown, setIsShown] = useState(false)
@@ -49,8 +51,8 @@ function App() {
 					<Main awsURL={awsURL} imgBaseURL={imgBaseURL} />
 				</Route>
 
-				<Route exact path="/detail">
-					<Detail />
+				<Route exact path="/detail/:a_c/:g_f">
+					<Detail awsURL={awsURL} pDImgBaseURL={pDImgBaseURL}/>
 				</Route>
 
 				<Route exact path="/bag">

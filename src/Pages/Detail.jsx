@@ -1,78 +1,87 @@
 import React from "react";
 import StickyBuy from "../Components/StickyBuy";
-import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import "../styles/Detail.scss";
-import { MdFavorite } from "react-icons/md";
+// import { MdFavorite } from "react-icons/md";
 
-const Detail = (props) => {
-	//////// Dummy Data ////////////////
+const Detail = ({awsURL, pDImgBaseURL}, props) => {
+
+	const {a_c, g_f} = useParams()
 	const [data, setData] = React.useState({});
 	const [thumbs, setThumbs] = React.useState([]);
 	const [pDImages, setPDImages] = React.useState([]);
-	const [sizes, setSizes] = React.useState([])
-	const transformResponse = require("../data/transformResponse");
-	const rawData = require("../data/women_basics_pants-leggings_Oversized-Joggers.json");
-	const dummyData = transformResponse([rawData])[0];
-	const pDBaseURL = "/images/";
-	console.log("raw data", rawData)
-	console.log("dummyData", dummyData);
-	console.log("data state", data);
-	console.log("images", pDImages);
-	console.log("Detail sizes", sizes)
+	const [sizeList, setSizeList] = React.useState([])
+	const [copyList, setCopyList] = React.useState([])
 
-	////////////////////////////////////
+	const getProductFamily = async () => {
+		console.log('fetching: '+ awsURL + `/product-family/${a_c}/${g_f}/`)
+		fetch(awsURL + `/product-family/${a_c}/${g_f}/`)
+			.then((res) => {
+				// console.log('get families response', res)
+				return res.json()
+			})
+			.then((data)=>{
+				console.log('Detail got data', data.body.Items[0])
+				const {
+					altText,
+					copy_list,
+					detail_images,
+					images,
+					sizes,
+					swatchColors,
+					thumb_images,
+					items,
+					...rest
+				} = data.body.Items[0];
+				// console.log('rest',rest)
+				// console.log('sizes fresh',sizes)
+				// console.log('thumbs fresh', thumb_images)
+				setData({ ...rest });
+				setThumbs([...thumb_images]);
+				setPDImages([...detail_images]);
+				setSizeList([...sizes]);
+				setCopyList(copy_list.map(el=>{return {...el}}))
 
-	console.log("Loading Detail Page");
-	
+			})
+	}
+	const copyListDisplay = copyList.map((el,i)=>{
+		return(
+			<li>
+				<div>
+					<span>{el.title}</span><span>--</span><span>{el.copy}</span>
+				</div>
+			</li>
+		)
+	})
 
 	const pDDisplay = pDImages.map((image, i) => {
 		return (
-			<div className={`pd${i+1} image-container`}>
-				{/* {`Image ${i}`} */}
-				<img src={`${pDBaseURL}${image}`} />
+			<div key={i} className={`pd${i+1} image-container`}>
+				<img src={`${pDImgBaseURL}${image}`} />
 			</div>
 		);
 	});
-
+	
 	React.useEffect(() => {
-		const {
-			altText,
-			copy_list,
-			detail_images,
-			images,
-			sizes,
-			swatchColors,
-			thumb_images,
-			items,
-			...rest
-		} = dummyData;
-		// console.log('rest',rest)
-		setData({ ...rest });
-		setThumbs([...thumb_images]);
-		setPDImages([...detail_images]);
-		setSizes([...sizes]);
+		getProductFamily()
 	}, []);
+	// console.log("sizes array",sizeList)
+	// console.log('thumb array', thumbs)
 	return (
 		<div className="product-detail">
 			<section className="product-display">
 				{pDDisplay}
 				<div className='product-content'>
-					<h2>{data.copy_desc}</h2>
 					<div>
-						<span>Title1</span>
-						<span>Copy1</span>
+						<h2>{data.copy_desc}</h2>
+						<ul>
+							{copyListDisplay}
+						</ul>
 					</div>
-					<div>
-						<span>Title2</span>
-						<span>Copy2</span>
-					</div>
-					<div>
-						<span>Title3</span>
-						<span>Copy3</span>
-					</div>
+
 				</div>
 			</section>
-			<StickyBuy thumbs={thumbs} data={data} sizes={sizes} />
+			<StickyBuy thumbs={thumbs} data={data} sizes={sizeList} pDImgBaseURL={pDImgBaseURL}/>
 		</div>
 	);
 };

@@ -1,4 +1,4 @@
-import react from 'react';
+import React from 'react';
 import '../styles/CallToAction1.scss'
 import {AiOutlineInfoCircle} from 'react-icons/ai'
 

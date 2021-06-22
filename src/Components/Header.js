@@ -3,7 +3,6 @@ import { css } from '@emotion/css'
 import {NavLink, Link} from 'react-router-dom'
 import '../styles/Header.scss'
 import {BsSearch} from 'react-icons/bs'
-import { MdFavorite } from "react-icons/md";
 import { BsHeart } from "react-icons/bs";
 import {RiUser3Line} from 'react-icons/ri'
 import {HiOutlineShoppingBag} from 'react-icons/hi'
@@ -57,7 +56,7 @@ const Header = () => {
                     </ul>
                 </nav>
                 <div className='logo-bc'>
-                    <NavLink to='/'><img src="https://res.cloudinary.com/dhad6e9gj/image/upload/v1623858729/HM_Site_Project/customLogo_RED_med-03_celm0k.png"/></NavLink>
+                    <NavLink to='/'><img alt="Ben & Cody" src="https://res.cloudinary.com/dhad6e9gj/image/upload/v1623858729/HM_Site_Project/customLogo_RED_med-03_celm0k.png"/></NavLink>
                 </div>
                 <nav className="top-right">
                     <ul>

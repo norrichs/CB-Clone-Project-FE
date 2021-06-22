@@ -9,7 +9,7 @@ const SplashCard3 = () => {
             <div className="splash-card2-container">
 
                 <div className="splash-card2-image">
-                    <img src="https://www2.hm.com/content/dam/home_s03/april_2021/7053d/7053d-handcrafted-interior-collection-3x2-teasers.jpg"/>
+                    <img alt="Splash Card" src="https://www2.hm.com/content/dam/home_s03/april_2021/7053d/7053d-handcrafted-interior-collection-3x2-teasers.jpg"/>
                 </div>
 
                 <div className="splash-card2-heading">

@@ -9,7 +9,7 @@ const SplashCard2 = () => {
             <div className="splash-card2-container">
 
                 <div className="splash-card2-image">
-                    <img src="https://lp2.hm.com/hmgoepprod?set=width[1280],quality[80],options[limit]&source=url[https://www2.hm.com/content/dam/divided_s03/may_2021/5273c/5273C-3x2-y2k-is-here-to-stay.jpg]&scale=width[global.width],height[15000],options[global.options]&sink=format[jpg],quality[global.quality]"/>
+                    <img alt="Splash Card" src="https://lp2.hm.com/hmgoepprod?set=width[1280],quality[80],options[limit]&source=url[https://www2.hm.com/content/dam/divided_s03/may_2021/5273c/5273C-3x2-y2k-is-here-to-stay.jpg]&scale=width[global.width],height[15000],options[global.options]&sink=format[jpg],quality[global.quality]"/>
                 </div>
 
                 <div className="splash-card2-heading">
