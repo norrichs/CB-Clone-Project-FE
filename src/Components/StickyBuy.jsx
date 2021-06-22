@@ -52,7 +52,7 @@ const StickyBuy = ({ data, thumbs, sizes ,pDImgBaseURL}, props) => {
 						<span>Find in-store</span>
 					</div>
 					<div className="size-selector" onClick={handleSelectSizeShown}>
-						Select size
+						<span>Select size</span><span>{'\u2304'}</span>
 						{sizeSelectShown 
 							? (<SelectSize 
 								show={sizeSelectShown} 
