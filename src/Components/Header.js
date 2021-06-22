@@ -16,29 +16,21 @@ const Header = () => {
 
 
     // THIS IS ME TESTING / TRYING TO GET DROPDOWN TO HIDE/SHOW
-    // const [isSwitchOn, setIsSwitchOn] = useState(".hidden")
+    const [showClass, setShowClass] = useState("hidden")
+    // const [hideClass, setHideClass] = useState("shown")
     
-    
-    // const handleShowMenu = (() => {
-    //     // const dropDown = document.getElementsByClassName('header-nav')
-    //     // dropDown.className.add('move-down')
-    //     // setIsSwitchOn(true)
-    //     setIsSwitchOn('not hidden>>?')
-    //     console.log('testing the button')
-        
-    // }) 
+    const handleShowMenu = (() => {
+        console.log('show')
+        setShowClass('shown')
+   
+    }) 
 
-    // function Testing(event) {
-    //     console.log('asd;lfkasdf;lakjs')
-    //     const testRef = useRef(null)
-    //     return (
-    //         <div ref = {myRef}>
-                
-    //         </div>
-    //     )
-      
-    // }
-    // Testing()
+    const handleHideMenu = (() => {
+        setShowClass('hidden')
+        console.log('hide')
+    })
+
+  
 
 
 
@@ -81,8 +73,10 @@ const Header = () => {
                     
 
                     {/* <li > */}
-                    {/* <li onMouseOver={handleShowMenu} > */}
-                    <li>
+                    <li 
+                    onMouseEnter={handleShowMenu} 
+                    onMouseLeave={handleHideMenu}
+                    >
                         <NavLink to="/product/women">Women</NavLink>
                     </li>
                     {/* <button onClick={showMenu}></button> */}
@@ -126,7 +120,7 @@ const Header = () => {
             <section className='header-right'>
                 
             </section>
-            <HeaderDropDown/>
+            <HeaderDropDown showClass={showClass}/>
         </header>
     )
 
