@@ -6,10 +6,12 @@ import TrendingSlider from '../Components/TrendingSlider';
 import SplashCard1 from '../Components/SplashCard1';
 import SplashCard2 from '../Components/SplashCard2';
 import SplashCard3 from '../Components/SplashCard3';
+// import HeaderDropDown from '../Components/HeaderDropDown';
 
 const Splash = ({awsURL, imgBaseURL}, props) => {
 return (
     <div>
+        {/* <HeaderDropDown/> */}
         <CallToAction1/>
         <TrendingSlider/>
         <SplashCard1 awsURL={awsURL} imgBaseURL={imgBaseURL}/>

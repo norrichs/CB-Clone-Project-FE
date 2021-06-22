@@ -1,0 +1,81 @@
+@import './App.scss';
+
+$navbarindent: 10px;
+
+// *{
+// 	box-sizing: border-box;
+// 	// border: 1px solid grey !important;
+// }
+
+
+.header-nav {
+    // border: 2px solid red;
+    background: white;
+    background: aquamarine;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    // height: 500px;
+    
+    
+    // This is for the hidden drop down menu. Currently hidden
+    position: absolute;
+    // top: $headerHeight-desktop - 75px;
+    left: 0;
+    right: 0;
+    // z-index: -1;
+    border-bottom: 5px solid black;
+    // transform: translateY(-195px)
+}
+
+
+
+
+.move-down{
+    transform: translateY(450px)
+}
+
+
+
+
+
+.category-column {
+    // border: 2px solid green;
+    width: 250px;
+    padding: 0 0 0 15px;
+}
+
+.header-group {
+    // border: 2px solid blue;
+    width: 250px;
+}
+
+.header-nav h2 {
+    // border: 2px solid red;
+    color: black;
+    font-weight: 500;
+    font-size: .8em;
+	margin-bottom: 10px;
+}
+
+.header-nav a {
+    // border: 2px solid blue;
+    // color: hotpink;
+    font-weight: 300;
+    font-size: .75em;
+    margin: 5px 0 5px 0;
+    // margin-bottom: 60px;
+} 
+// .header-nav a:hover {
+//     text-decoration: underline;
+// }
+
+// This is for the hidden drop down menu. Currently hidden
+.hidden {
+    display: none;
+    // background: purple;
+}
+
+
+
+
