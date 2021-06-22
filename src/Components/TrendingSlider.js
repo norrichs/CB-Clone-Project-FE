@@ -57,8 +57,8 @@ const TrendingSlider = () => {
 
             <div className="trending-single-image-container">
                 <div className="trending-image">
-                   {/* <NavLink to="fake/:womenClassic"><img src="https://bc-clone-images.s3.us-east-2.amazonaws.com/group/women_basics_tops_Ribbed-Crop-Top_00.jpg"/></NavLink> */}
-                   <NavLink to="fake/:womenClassic"><img src={randomImage}/></NavLink>
+                   {/* <NavLink to="fake/:womenClassic"><img alt="trending" src="https://bc-clone-images.s3.us-east-2.amazonaws.com/group/women_basics_tops_Ribbed-Crop-Top_00.jpg"/></NavLink> */}
+                   <NavLink to="fake/:womenClassic"><img alt="trending" src={randomImage}/></NavLink>
                 </div>
                 <div className="trending-image-copy">
                     <p>Women</p>
@@ -67,7 +67,7 @@ const TrendingSlider = () => {
              </div>
             <div className="trending-single-image-container">
                 <div className="trending-image">
-                    <NavLink to="fake/:womenClassic"><img src="https://bc-clone-images.s3.us-east-2.amazonaws.com/group/women_shirts-blouses_tunics_Voluminous-Poplin-Tunic_00.jpg"/></NavLink>
+                    <NavLink to="fake/:womenClassic"><img alt="trending" src="https://bc-clone-images.s3.us-east-2.amazonaws.com/group/women_shirts-blouses_tunics_Voluminous-Poplin-Tunic_00.jpg"/></NavLink>
                 </div>
                 <div className="trending-image-copy">
                     <p>Women</p>
@@ -76,7 +76,7 @@ const TrendingSlider = () => {
              </div>
             <div className="trending-single-image-container">
                 <div className="trending-image">
-                    <NavLink to="fake/:womenTops"><img src="https://bc-clone-images.s3.us-east-2.amazonaws.com/group/women_shirts-blouses_denim-shirts_Denim-Shirt_00.jpg"/></NavLink>
+                    <NavLink to="fake/:womenTops"><img alt="trending" src="https://bc-clone-images.s3.us-east-2.amazonaws.com/group/women_shirts-blouses_denim-shirts_Denim-Shirt_00.jpg"/></NavLink>
                 </div>
                 <div className="trending-image-copy">
                     <p>Women</p>
@@ -85,7 +85,7 @@ const TrendingSlider = () => {
              </div>
             <div className="trending-single-image-container">
                 <div className="trending-image">
-                    <NavLink to="fake/:babyNewborn"><img src="https://bc-clone-images.s3.us-east-2.amazonaws.com/group/women_basics_tops_Viscose-V-neck-T-shirt_00.jpg"/></NavLink>
+                    <NavLink to="fake/:babyNewborn"><img alt="trending" src="https://bc-clone-images.s3.us-east-2.amazonaws.com/group/women_basics_tops_Viscose-V-neck-T-shirt_00.jpg"/></NavLink>
                 </div>
                 <div className="trending-image-copy">
                     <p>Baby</p>
@@ -94,7 +94,7 @@ const TrendingSlider = () => {
              </div>
             <div className="trending-single-image-container">
                 <div className="trending-image">
-                    <NavLink to="fake/:womenStretch"><img src="https://bc-clone-images.s3.us-east-2.amazonaws.com/group/women_basics_pants-leggings_Capri-Leggings_00.jpg"/></NavLink>
+                    <NavLink to="fake/:womenStretch"><img alt="trending" src="https://bc-clone-images.s3.us-east-2.amazonaws.com/group/women_basics_pants-leggings_Capri-Leggings_00.jpg"/></NavLink>
                 </div>
                 <div className="trending-image-copy">
                     <p>Women</p>
@@ -103,7 +103,7 @@ const TrendingSlider = () => {
              </div>
             <div className="trending-single-image-container">
                 <div className="trending-image">
-                    <NavLink to="fake/:womenStretch"><img src="https://bc-clone-images.s3.us-east-2.amazonaws.com/group/women_pants_chinos-slacks_Creased-Pants_00.jpg"/></NavLink>
+                    <NavLink to="fake/:womenStretch"><img alt="trending" src="https://bc-clone-images.s3.us-east-2.amazonaws.com/group/women_pants_chinos-slacks_Creased-Pants_00.jpg"/></NavLink>
                 </div>
                 <div className="trending-image-copy">
                     <p>Women</p>
@@ -112,7 +112,7 @@ const TrendingSlider = () => {
              </div>
             <div className="trending-single-image-container">
                 <div className="trending-image">
-                    <NavLink to="fake/:womenJoggers"><img src="https://bc-clone-images.s3.us-east-2.amazonaws.com/group/women_pants_paperbag-pants_Paper-bag-Pants_00.jpg"/></NavLink>
+                    <NavLink to="fake/:womenJoggers"><img alt="trending" src="https://bc-clone-images.s3.us-east-2.amazonaws.com/group/women_pants_paperbag-pants_Paper-bag-Pants_00.jpg"/></NavLink>
                 </div>
                 <div className="trending-image-copy">
                     <p>Women</p>
@@ -121,7 +121,7 @@ const TrendingSlider = () => {
              </div>
             <div className="trending-single-image-container">
                 <div className="trending-image">
-                    <NavLink to="fake/:womenOveralls"><img src="https://bc-clone-images.s3.us-east-2.amazonaws.com/group/women_jumpsuits-rompers_overalls_Denim-Overalls_00.jpg"/></NavLink>
+                    <NavLink to="fake/:womenOveralls"><img alt="trending" src="https://bc-clone-images.s3.us-east-2.amazonaws.com/group/women_jumpsuits-rompers_overalls_Denim-Overalls_00.jpg"/></NavLink>
                 </div>
                 <div className="trending-image-copy">
                     <p>Women</p>
@@ -130,7 +130,7 @@ const TrendingSlider = () => {
              </div>
             <div className="trending-single-image-container">
                 <div className="trending-image">
-                    <NavLink to="fake/:womenButton"><img src="https://bc-clone-images.s3.us-east-2.amazonaws.com/group/women_basics_pants-leggings_Rib-knit-Pants_00.jpg"/></NavLink>
+                    <NavLink to="fake/:womenButton"><img alt="trending" src="https://bc-clone-images.s3.us-east-2.amazonaws.com/group/women_basics_pants-leggings_Rib-knit-Pants_00.jpg"/></NavLink>
                 </div>
                 <div className="trending-image-copy">
                     <p>Women</p>
@@ -139,7 +139,7 @@ const TrendingSlider = () => {
              </div>
             <div className="trending-single-image-container">
                 <div className="trending-image">
-                    <NavLink to="fake/:womenSweats"><img src="https://bc-clone-images.s3.us-east-2.amazonaws.com/group/women_pants_high-waisted_Joggers_00.jpg"/></NavLink>
+                    <NavLink to="fake/:womenSweats"><img alt="trending" src="https://bc-clone-images.s3.us-east-2.amazonaws.com/group/women_pants_high-waisted_Joggers_00.jpg"/></NavLink>
                 </div>
                 <div className="trending-image-copy">
                     <p>Women</p>
@@ -148,7 +148,7 @@ const TrendingSlider = () => {
              </div>
             <div className="trending-single-image-container">
                 <div className="trending-image">
-                <NavLink to="fake/:womenStyles"><img src="https://bc-clone-images.s3.us-east-2.amazonaws.com/group/women_jumpsuits-rompers_overalls_Denim-Carpenter-Overalls_00.jpg"/></NavLink>
+                <NavLink to="fake/:womenStyles"><img alt="trending" src="https://bc-clone-images.s3.us-east-2.amazonaws.com/group/women_jumpsuits-rompers_overalls_Denim-Carpenter-Overalls_00.jpg"/></NavLink>
                 </div>
                 <div className="trending-image-copy">
                     <p>Women</p>
@@ -157,7 +157,7 @@ const TrendingSlider = () => {
              </div>
             <div className="trending-single-image-container">
                 <div className="trending-image">
-                    <NavLink to="fake/:womenPjs"><img src="https://bc-clone-images.s3.us-east-2.amazonaws.com/group/women_pants_high-waisted_Patterned-Pants_00.jpg"/></NavLink>
+                    <NavLink to="fake/:womenPjs"><img alt="trending" src="https://bc-clone-images.s3.us-east-2.amazonaws.com/group/women_pants_high-waisted_Patterned-Pants_00.jpg"/></NavLink>
                 </div>
                 <div className="trending-image-copy">
                     <p>Women</p>
@@ -166,7 +166,7 @@ const TrendingSlider = () => {
              </div>
             <div className="trending-single-image-container">
                 <div className="trending-image">
-                    <NavLink to="fake/:womenExpecting"><img src="https://bc-clone-images.s3.us-east-2.amazonaws.com/group/women_maternity-clothes_tops_MAMA-Cotton-Tank-Top_00.jpg"/></NavLink>
+                    <NavLink to="fake/:womenExpecting"><img alt="trending" src="https://bc-clone-images.s3.us-east-2.amazonaws.com/group/women_maternity-clothes_tops_MAMA-Cotton-Tank-Top_00.jpg"/></NavLink>
                 </div>
                 <div className="trending-image-copy">
                     <p>Women</p>
@@ -175,7 +175,7 @@ const TrendingSlider = () => {
              </div>
             <div className="trending-single-image-container">
                 <div className="trending-image">
-                    <NavLink to="fake/:womenBusiness"><img src="https://bc-clone-images.s3.us-east-2.amazonaws.com/group/women_socks-tights_leggings_Dotted-Tights_00.jpg"/></NavLink>
+                    <NavLink to="fake/:womenBusiness"><img alt="trending" src="https://bc-clone-images.s3.us-east-2.amazonaws.com/group/women_socks-tights_leggings_Dotted-Tights_00.jpg"/></NavLink>
                 </div>
                 <div className="trending-image-copy">
                     <p>Women</p>

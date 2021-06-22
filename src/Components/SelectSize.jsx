@@ -2,9 +2,9 @@ import React from 'react'
 
 const SelectSize = ({sizes}) => {
 	console.log('size selector', sizes)
-	const sizeList = sizes.map((size)=>{
+	const sizeList = sizes.map((size,i)=>{
 		return(
-			<li>
+			<li key={i}>
 				<div>
 					{size}
 				</div>

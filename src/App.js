@@ -18,8 +18,8 @@ import Detail from "./Pages/Detail";
 
 function App() {
 	const awsURL = "https://ccexp5wwrk.execute-api.us-east-2.amazonaws.com/dev";
-	const imgBaseURL ="https://bc-clone-images.s3.us-east-2.amazonaws.com/group/";
-
+	const imgBaseURL = "https://bc-clone-images.s3.us-east-2.amazonaws.com/group/";
+	const pDImgBaseURL = "https://bc-clone-images.s3.us-east-2.amazonaws.com/detail/"
 	// const [audience, setAudience] = React.useState([]);
 	// const [category, setCategory] = React.useState([]);
 	// const [group, setGroup] = React.useState([]);
@@ -71,8 +71,8 @@ function App() {
 					<Main awsURL={awsURL} imgBaseURL={imgBaseURL} />
 				</Route>
 
-				<Route exact path="/detail">
-					<Detail />
+				<Route exact path="/detail/:a_c/:g_f">
+					<Detail awsURL={awsURL} pDImgBaseURL={pDImgBaseURL}/>
 				</Route>
 
 				<Route exact path="/bag">
