@@ -17,12 +17,10 @@ const Header = () => {
 
     // THIS IS ME TESTING / TRYING TO GET DROPDOWN TO HIDE/SHOW
     const [showClass, setShowClass] = useState("hidden")
-    // const [hideClass, setHideClass] = useState("shown")
     
     const handleShowMenu = (() => {
         console.log('show')
-        setShowClass('shown')
-   
+        setShowClass('shown')   
     }) 
 
     const handleHideMenu = (() => {

@@ -16,11 +16,7 @@ $navbarindent: 10px;
     display: flex;
     justify-content: center;
     // height: 500px;
-    
-    
-    // This is for the hidden drop down menu. Currently hidden
     position: absolute;
-    // top: $headerHeight-desktop - 75px;
     left: 0;
     right: 0;
     z-index: -1;
@@ -31,8 +27,8 @@ $navbarindent: 10px;
 
 .category-column {
     // border: 2px solid green;
-    width: 250px;
-    padding: 0 0 0 15px;
+    // width: 250px;
+    padding: 30px 0 0 15px;
 }
 
 .header-group {
@@ -62,12 +58,12 @@ $navbarindent: 10px;
 
 // This is for the hidden drop down menu. Currently hidden
 .hidden {
-    transform: translateY(-195px)
+    transform: translateY(-230px)
 }
 
 .shown {
     z-index: 1;
-    transform: translateY(170px)
+    transform: translateY(155px)
 }
 
 
