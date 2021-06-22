@@ -1,5 +1,14 @@
 @import './App.scss';
 
+
+div.cover-screen{
+	position: fixed;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-color: rgba(0,0,0,0.9);
+}
 div.product-detail{
 	padding: 0 20px;
 	display: grid;
@@ -83,7 +92,7 @@ div.product-detail{
 			padding: 0 15%;
 			
 			header{
-				margin-top: 30px;
+				margin: 30px 0px;
 				display: flex;
 				flex-direction: row;
 				justify-content: space-between;
@@ -105,8 +114,27 @@ div.product-detail{
 					width: 100%;
 					height: $button-height;
 					position: relative;
-					color: white;
+					color: black;
+					font-size: 0.75em;
+					background-color: white;
 					border: 1px solid gray;
+					// width: 100%;
+					div.size-menu{
+						position:absolute;
+						z-index: 10;
+						top: -5px;
+						left: -5px;
+						right: -5px;
+						div.size-item{
+							background-color: white;
+							width: 100%;
+							height: $button-height;
+							padding: 10px;
+							border: 1px solid gray;
+	
+						}
+
+					}
 	
 	
 				}
