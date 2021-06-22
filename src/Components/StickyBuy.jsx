@@ -6,6 +6,7 @@ import { MdFavorite } from "react-icons/md";
 import SelectSize from '../Components/SelectSize'
 
 const StickyBuy = ({ data, thumbs, sizes }, props) => {
+	const [sizeSelectShown, setSizeSelectShown] = React.useState(false)
 	console.log('sticky sizes', sizes)
 	console.log("sticky buy data->", data);
 	const thumbBaseURL = "/images/";
@@ -27,19 +28,22 @@ const StickyBuy = ({ data, thumbs, sizes }, props) => {
 						<MdFavorite />
 					</span>
 				</header>
-				<h3>{data.price}</h3>
-				<label>style label</label>
-				<div className="thumb-slider">
-					<h3>thumbs</h3>
-					<ul>{thumbDisplay}</ul>
-				</div>
-				<div>
-					<span>icon</span>
-					<span>Find in-store</span>
-				</div>
 				<form>
-					<SelectSize sizes={sizes}/>
-					<button></button>
+					<h3>$ {data.price}</h3>
+					<label>style label</label>
+					<div className="thumb-slider">
+						<h3>thumbs</h3>
+						<ul>{thumbDisplay}</ul>
+					</div>
+					<div>
+						<span>icon</span>
+						<span>Find in-store</span>
+					</div>
+					<div className="size-selector">
+						Select size
+						<SelectSize show={sizeSelectShown}sizes={sizes}/>
+					</div>
+					<input type="submit" className="add-button" value="Add"/>
 				</form>
 			</section>
 		</div>
