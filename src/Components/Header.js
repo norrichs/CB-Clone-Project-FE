@@ -68,43 +68,44 @@ const Header = () => {
                 </nav>
                 <nav className="middle-nav">
                     <ul>
-
-                        
-                    
-
-                    {/* <li > */}
                     <li 
                     onMouseEnter={handleShowMenu} 
-                    onMouseLeave={handleHideMenu}
-                    >
+                    onMouseLeave={handleHideMenu}>
                         <NavLink to="/product/women">Women</NavLink>
                     </li>
-                    {/* <button onClick={showMenu}></button> */}
-                    
-
-
-
-
-
-                    <li>
+                    <li 
+                    onMouseEnter={handleShowMenu} 
+                    onMouseLeave={handleHideMenu}>
                         <NavLink to="/product/divided">Divided</NavLink>
                     </li>
-                    <li>
+                    <li 
+                    onMouseEnter={handleShowMenu} 
+                    onMouseLeave={handleHideMenu}>
                         <NavLink to="/product/men">Men</NavLink>
                     </li>
-                    <li>
+                    <li 
+                    onMouseEnter={handleShowMenu} 
+                    onMouseLeave={handleHideMenu}>
                         <NavLink to="/product/baby">Baby</NavLink>
                     </li>
-                    <li>
+                    <li 
+                    onMouseEnter={handleShowMenu} 
+                    onMouseLeave={handleHideMenu}>
                         <NavLink to="/product/kids">Kids</NavLink>
                     </li>
-                    <li>
+                    <li 
+                    onMouseEnter={handleShowMenu} 
+                    onMouseLeave={handleHideMenu}>
                         <NavLink to="/product/hmhome">H&M HOME</NavLink>
                     </li>
-                    <li>
+                    <li 
+                    onMouseEnter={handleShowMenu} 
+                    onMouseLeave={handleHideMenu}>
                         <NavLink to="/fake/:sale">Sale</NavLink>
                     </li>
-                    <li>
+                    <li 
+                    onMouseEnter={handleShowMenu} 
+                    onMouseLeave={handleHideMenu}>
                         <NavLink to="/fake/:sustainability">Sustainability</NavLink>
                     </li>
 
