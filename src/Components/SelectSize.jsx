@@ -17,7 +17,7 @@ const SelectSize = ({sizes, handleSelectSizeShown}) => {
 		<div className="size-menu">
 			
 			<ul>
-				<li><div className="size-item">Select Size</div></li>
+				<li><div className="size-item"><span>Select size</span><span>{'\u2304'}</span></div></li>
 				{sizeList}
 			</ul>
 		</div>
