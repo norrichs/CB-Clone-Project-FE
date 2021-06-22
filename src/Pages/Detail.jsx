@@ -11,17 +11,18 @@ const Detail = ({awsURL, pDImgBaseURL}, props) => {
 	const [thumbs, setThumbs] = React.useState([]);
 	const [pDImages, setPDImages] = React.useState([]);
 	const [sizes, setSizes] = React.useState([])
-	const transformResponse = require("../data/transformResponse");
-	const rawData = require("../data/women_basics_pants-leggings_Oversized-Joggers.json");
-	const dummyData = transformResponse([rawData])[0];
+	const [copyList, setCopyList] = React.useState([])
+	// const transformResponse = require("../data/transformResponse");
+	// const rawData = require("../data/women_basics_pants-leggings_Oversized-Joggers.json");
+	// const dummyData = transformResponse([rawData])[0];
 	
 	// console.log("raw data", rawData)
 	// console.log("dummyData", dummyData);
 	// console.log("data state", data);
 	// console.log("images", pDImages);
 	// console.log("Detail sizes", sizes)
-	console.log('route params @ detail', a_c, g_f)
-
+	// console.log('route params @ detail', a_c, g_f)
+	console.log('copylist state', copyList)
 // dummy data
 
 
@@ -54,10 +55,19 @@ const Detail = ({awsURL, pDImgBaseURL}, props) => {
 				setThumbs([...thumb_images]);
 				setPDImages([...detail_images]);
 				setSizes([...sizes]);
+				setCopyList(copy_list.map(el=>{return {...el}}))
 
 			})
 	}
-
+	const copyListDisplay = copyList.map((el,i)=>{
+		return(
+			<li>
+				<div>
+					<span>{el.title}</span><span>--</span><span>{el.copy}</span>
+				</div>
+			</li>
+		)
+	})
 
 	const pDDisplay = pDImages.map((image, i) => {
 		return (
@@ -75,23 +85,13 @@ const Detail = ({awsURL, pDImgBaseURL}, props) => {
 			<section className="product-display">
 				{pDDisplay}
 				<div className='product-content'>
-					<h2>{data.copy_desc}</h2>
-		
-
-
-
 					<div>
-						<span>Title1</span>
-						<span>Copy1</span>
+						<h2>{data.copy_desc}</h2>
+						<ul>
+							{copyListDisplay}
+						</ul>
 					</div>
-					<div>
-						<span>Title2</span>
-						<span>Copy2</span>
-					</div>
-					<div>
-						<span>Title3</span>
-						<span>Copy3</span>
-					</div>
+
 				</div>
 			</section>
 			<StickyBuy thumbs={thumbs} data={data} sizes={sizes} />

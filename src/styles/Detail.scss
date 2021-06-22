@@ -1,6 +1,7 @@
 @import './App.scss';
 
 div.product-detail{
+	padding: 0 20px;
 	display: grid;
 	grid-template-columns: 6fr 4fr;
 	grid-template-rows: auto auto;
@@ -36,10 +37,36 @@ div.product-detail{
 			width: 100%;
 			min-width: 200px;
 			// max-width: 400px;
-			border: 1px solid magenta;
+			// border: 1px solid magenta;
 			img{
 				min-width: 200px;
 				width: 100%;
+			}
+		}
+		div.product-content{
+			background-color: white;
+			padding: 0 15%;
+			div{
+			   h2{
+				   font-size: 1em;
+				   margin: 30px 0 30px 0;
+			   }
+			   ul li div{
+				   font-size: 0.75em;
+				   margin-bottom: 10px;
+				   display:flex;
+				   flex-direction: row;
+				   justify-content: flex-start;
+				   // border: 1px solid black !important;
+				   span{
+					   font-weight: 200;
+					   margin-right: 10px;
+				   }
+				   span:first-of-type{
+					   font-weight: 900;
+				   }
+   
+			   }
 			}
 		}
 	}
@@ -48,25 +75,51 @@ div.product-detail{
 		flex-direction: column;
 		justify-content: flex-start;
 
+
 		section.sticky-buy{
 			position:-webkit-sticky;
 			position:sticky;
 			top: 0;
-			padding: 0 20px;
-			justify-self: flex-start;
-			display: flex;
-			flex-direction: column;
-			justify-content: flex-start;
+			padding: 0 15%;
+			
 			header{
+				margin-top: 30px;
 				display: flex;
 				flex-direction: row;
 				justify-content: space-between;
 			}
-			div.thumb-slider ul{
+			form{
 				display: flex;
-				flex-direction: row;
-				align-items: flex-start;
-				gap: 5px;
+				justify-self: flex-start;
+				flex-direction: column;
+				justify-content: flex-start;
+				gap: 15px;
+				div.thumb-slider ul{
+					display: flex;
+					flex-direction: row;
+					align-items: flex-start;
+					gap: 5px;
+				}
+				$button-height: 30px;
+				div.size-selector{
+					width: 100%;
+					height: $button-height;
+					position: relative;
+					color: white;
+					border: 1px solid gray;
+	
+	
+				}
+				input.add-button{
+					width: 100%;
+					height: $button-height;
+					color: white;
+					background-color: black;
+					outline: none;
+					border-image: none;
+					border-style: none;
+				
+				}
 			}
 		}
 	}
@@ -79,7 +132,7 @@ div.product-detail{
 		"pd1 pd1 pd1 pd1"
 		"pdc pdc pdc pdc"
 		"pd2 pd2 pd3 pd3"
-		" .  pd4 pd4  . "
+		"pd4 pd4 pd4 pd4"
 		" .  pd5 pd5  . "
 		" .  pd6 pd6  . ";
 	}
