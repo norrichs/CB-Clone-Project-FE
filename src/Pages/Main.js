@@ -84,7 +84,7 @@ const Main = ({ awsURL, imgBaseURL }, props) => {
 		group === undefined ? getProductFamiliesForCategory() : getProductFamiliesForGroup() 
 	},[location])
 	return (
-		<main >
+		<main id={'main-container'}>
             
 			<SideBarNav />
 			<ContentContainer>
