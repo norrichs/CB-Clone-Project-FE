@@ -1,6 +1,6 @@
 import React from "react";
 // import ThumbSlider from "./ThumbSlider";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import "../styles/Detail.scss";
 import { MdFavorite } from "react-icons/md";
 import SelectSize from '../Components/SelectSize'

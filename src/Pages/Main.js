@@ -35,6 +35,8 @@ const Main = ({ awsURL, imgBaseURL }, props) => {
 						key={i}
 						imgBaseURL={imgBaseURL} 
 						pFam={{
+							a_c: pFam.a_c,
+							g_f: pFam.g_f,
 							audience: pFam.audience,
 							category: pFam.category,
 							group: pFam.group,
