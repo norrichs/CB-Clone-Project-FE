@@ -7,7 +7,6 @@ import ContentContainer from "../Components/ContentContainer";
 import ProductCard from "../Components/ProductCard";
 import '../styles/Main.scss'
 
-
 const Main = ({ awsURL, imgBaseURL }, props) => {
 	// console.log('this is the props', props)
 	// console.log('awsurl', awsURL)

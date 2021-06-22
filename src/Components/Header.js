@@ -75,13 +75,6 @@ const Header = () => {
                     {/* <u>Search products<u> */}
                     <p><u>Search products</u></p>
                 </div>
-
-
-
-
-
-
-
             <section className='header-center'>
             </section>
             <section className='header-right'>
