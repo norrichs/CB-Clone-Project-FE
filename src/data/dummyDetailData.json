@@ -1,0 +1,81 @@
+[
+	
+{
+	"audience": { "S": "women" },
+	"product_category": { "S": "jumpsuits-rompers" },
+	"product_group": { "S": "long-jumpsuits" },
+	"product_family": { "S": "Ribbed Jersey Jumpsuit" },
+	"price": { "N": "45.95" },
+	"price_sale": { "N": "55" },
+	"altText": {
+		"L": [
+			{ "S": "Ribbed Jersey JumpsuitModel" },
+			{ "S": "Ribbed Jersey Jumpsuit" }
+		]
+	},
+	"swatchColors": { "L": [] },
+	"images": {
+		"L": [
+			{
+				"S": "women_jumpsuits-rompers_long-jumpsuits_Ribbed-Jersey-Jumpsuit_00.jpg"
+			},
+			{
+				"S": "women_jumpsuits-rompers_long-jumpsuits_Ribbed-Jersey-Jumpsuit_01.jpg"
+			}
+		]
+	},
+	"items": { "L": [] },
+	"a_c": { "S": "women_jumpsuits-rompers" },
+	"g_f": { "S": "long-jumpsuits_Ribbed-Jersey-Jumpsuit" },
+	"copy_desc": {
+		"S": "Sleeveless jumpsuit in ribbed jersey. Opening at back with button at back of neck, seam at waist, and wide, extra-long legs with pleats."
+	},
+	"sizes": {
+		"L": [
+			{ "S": "XS" },
+			{ "S": "S" },
+			{ "S": "M" },
+			{ "S": "L" },
+			{ "S": "XL" }
+		]
+	},
+	"copy_list": {
+		"L": [
+			{
+				"title": { "S": "Composition" },
+				"copy": { "S": "Cotton 55%, Polyester 36%, Elastane 9%" }
+			},
+			{ "title": { "S": "Art. No." }, "copy": { "S": "0970107002" } }
+		]
+	},
+	"detail_images": {
+		"L": [
+			{
+				"S": "women_jumpsuits-rompers_long-jumpsuits_Ribbed-Jersey-Jumpsuit-dp00.jpg"
+			},
+			{
+				"S": "women_jumpsuits-rompers_long-jumpsuits_Ribbed-Jersey-Jumpsuit-dp01.jpg"
+			},
+			{
+				"S": "women_jumpsuits-rompers_long-jumpsuits_Ribbed-Jersey-Jumpsuit-dp02.jpg"
+			},
+			{
+				"S": "women_jumpsuits-rompers_long-jumpsuits_Ribbed-Jersey-Jumpsuit-dp03.jpg"
+			},
+			{
+				"S": "women_jumpsuits-rompers_long-jumpsuits_Ribbed-Jersey-Jumpsuit-dp04.jpg"
+			}
+		]
+	},
+	"thumb_images": {
+		"L": [
+			{
+				"S": "women_jumpsuits-rompers_long-jumpsuits_Ribbed-Jersey-Jumpsuit-th00.jpg"
+			},
+			{
+				"S": "women_jumpsuits-rompers_long-jumpsuits_Ribbed-Jersey-Jumpsuit-th01.jpg"
+			}
+		]
+	}
+}
+]
