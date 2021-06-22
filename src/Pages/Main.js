@@ -97,3 +97,4 @@ const Main = ({ awsURL, imgBaseURL }, props) => {
 };
 
 export default Main;
+ 
