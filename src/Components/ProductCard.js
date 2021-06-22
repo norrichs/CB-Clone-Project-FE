@@ -6,6 +6,8 @@ import { MdFavorite } from "react-icons/md";
 const ProductCard = ({ pFam, imgBaseURL}) => {
 	console.log("ProductCard product prop:", pFam)
     
+
+	const [cardHidden, setCardHidden] = React.useState(true)
     //////////////////////////////
     // * pFam object contents   //
     //////////////////////////////
@@ -20,14 +22,18 @@ const ProductCard = ({ pFam, imgBaseURL}) => {
         // alt1:        
         // label:      
 
+	React.useEffect(()=>{
+		setCardHidden(true)
+	},[])
 
     return (
-		<div className="card-container">
+		<div className={cardHidden ? ' card-container hidden-card' : 'card-container visible-card'}>
 			<Link to={`/detail/${pFam.a_c}/${pFam.g_f}`}>
 				<div className="card-image-container">
 					<img
 									onMouseOver={e => e.target.setAttribute('src', imgBaseURL + pFam.image1)}
 									onMouseOut ={e => e.target.setAttribute('src',imgBaseURL + pFam.image0)}
+									onLoad={()=>{setCardHidden(false)}}
 						alt={pFam.alt0}
 						className="card-image"
 						src={imgBaseURL + pFam.image0}
