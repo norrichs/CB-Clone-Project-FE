@@ -1,0 +1,75 @@
+@import './App.scss';
+//NOTE: all variables are being imported from App.scss
+
+
+.trending-container-heading h3 {
+    // border: 2px solid red;
+    display: flex;
+    justify-content: center;
+    margin: 40px 0 20px 0; 
+    font-size: 1.3em;
+    font-weight: 500;
+}
+
+.slider {
+    // border: 3px solid blue;
+    width: 300px;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: 30px;
+    
+    //Trying to figure out how to get scroll not show while still being able to drag and scroll
+    // -webkit-overflow-scrolling: touch;
+    &::-webkit-scrollbar {
+    // width: 0;
+    // background: transparent;
+    }
+}
+
+
+
+.trending-container {
+    // border: 2px solid red;
+    margin: 0 auto;
+    width: $trendingWidth;
+    height: $trendingHeight;
+    display: flex;
+    margin-bottom: 70px;
+    
+    .trending-single-image-container {
+        //   border: 2px solid blue;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 100px;
+          margin: 0 8px 0 8px;
+                  
+          .trending-image img {
+            // border: 2px solid red;
+            height: 90px;
+            width: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            }
+            
+            .trending-image-copy {
+                margin: 10px 0 0 0;
+                text-align: center;
+                font-size: .7em;
+            }
+            .trending-image-copy p:nth-of-type(2) {
+                // border: 2px solid red;
+                margin: 4px 0 0 0;
+                font-weight: 600;
+                // font-size: .2em
+            }
+            .trending-image img:hover {
+                cursor: pointer;
+            }
+        }
+
+}
+
+
+

@@ -20,6 +20,12 @@ body {
 /////////////////////////////////////////////////////////////
          ////////////// PRODUCT CARD //////////
 /////////////////////////////////////////////////////////////
+.hidden-card{
+    display: none;
+}
+.visible-card{
+    display: inline-block;
+}
 .card-container {
     // border: 2px solid rgb(165, 243, 123);
     // box-sizing: border-box;

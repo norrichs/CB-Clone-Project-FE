@@ -4,7 +4,7 @@ $navbarindent: 10px;
 
 *{
 	box-sizing: border-box;
-	// border: 1px solid grey !important;
+	// border: 1px solid grey;
 }
 a{
 	color: black;
@@ -21,11 +21,11 @@ nav.sidebar-nav{
 	font-weight: 300;
 	font-size: .75em;	
 	h2{
-		font-weight: 700;
+		font-weight: 600;
+		font-size: 1.2em;
 		margin-bottom: 10px;
 	}
 	padding-left: 24px;
-	// background-color: sandybrown;
 	min-width: $sidebarWidth-desktop;
 	max-width: $sidebarWidth-desktop;
 	ul{
@@ -34,6 +34,7 @@ nav.sidebar-nav{
 		margin-bottom: 15px;
 	}
 	nav ul{
+		// border: 1px solid magenta !important;
 		padding-left: 0px;
 	}
 	li{
