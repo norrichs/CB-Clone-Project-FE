@@ -18,7 +18,7 @@ const SideBarNav = (props) => {
 								return (
 									<li key={i}>
 										<NavLink
-											to={`/${audience.audience}/${category.category}`}
+											to={`/product/${audience.audience}/${category.category}`}
 										>
 											{category.label}
 										</NavLink>
@@ -30,7 +30,7 @@ const SideBarNav = (props) => {
 														key={i}
 													>
 														<NavLink
-															to={`/${audience.audience}/${category.category}/${group.group}`}
+															to={`/product/${audience.audience}/${category.category}/${group.group}`}
 															activeClassName={
 																"active-navlink"
 															}
@@ -47,7 +47,7 @@ const SideBarNav = (props) => {
 								return (
 									<li key={i}>
 										<NavLink
-											to={`/${audience.audience}/${category.category}`}
+											to={`/product/${audience.audience}/${category.category}`}
 										>
 											{category.label}
 										</NavLink>
@@ -68,19 +68,19 @@ const SideBarNav = (props) => {
 			<h2>New Arrivals</h2>
 			<ul>
 				<li>
-					<NavLink activeClassName={"active-navlink"} to="/products">
+					<NavLink activeClassName={"active-navlink"} to="/new/all">
 						View All
 					</NavLink>
 				</li>
 				<li>
-					<NavLink activeClassName={"active-navlink"} to="/clothes">
+					<NavLink activeClassName={"active-navlink"} to="/new/clothes">
 						Clothes
 					</NavLink>
 				</li>
 				<li>
 					<NavLink
 						activeClassName={"active-navlink"}
-						to="/shoes-and-accessories"
+						to="/new/shoes-and-accessories"
 					>
 						Shoes and Accessories
 					</NavLink>
@@ -89,32 +89,32 @@ const SideBarNav = (props) => {
 			<h2>Offers & Deals</h2>
 			<ul>
 				<li>
-					<NavLink activeClassName={"active-navlink"} to="/sale">
+					<NavLink activeClassName={"active-navlink"} to="/sale/50percent">
 						Up to 50% off
 					</NavLink>
 				</li>
 				<li>
-					<NavLink activeClassName={"active-navlink"} to="/sale">
+					<NavLink activeClassName={"active-navlink"} to="/sale/tees">
 						Tees up to 60% off
 					</NavLink>
 				</li>
 				<li>
-					<NavLink activeClassName={"active-navlink"} to="/sale">
+					<NavLink activeClassName={"active-navlink"} to="/sale/hoodies">
 						Hoodies & Sweatshirts from $12.99
 					</NavLink>
 				</li>
 				<li>
-					<NavLink activeClassName={"active-navlink"} to="/sale">
+					<NavLink activeClassName={"active-navlink"} to="/sale/pants">
 						Pants from $9.99
 					</NavLink>
 				</li>
 				<li>
-					<NavLink activeClassName={"active-navlink"} to="/sale">
+					<NavLink activeClassName={"active-navlink"} to="/sale/multipacks">
 						Multipacks from $9.99
 					</NavLink>
 				</li>
 				<li>
-					<NavLink activeClassName={"active-navlink"} to="/sale">
+					<NavLink activeClassName={"active-navlink"} to="/sale/studentdiscount">
 						Student Discount: Get 15% off
 					</NavLink>
 				</li>
@@ -122,22 +122,22 @@ const SideBarNav = (props) => {
 			<h2>Trending Now</h2>
 			<ul>
 				<li>
-					<NavLink activeClassName={"active-navlink"} to="/sale">
+					<NavLink activeClassName={"active-navlink"} to="/trending/summer">
 						The Summer Shop
 					</NavLink>
 				</li>
 				<li>
-					<NavLink activeClassName={"active-navlink"} to="/linen">
+					<NavLink activeClassName={"active-navlink"} to="/trending/linen">
 						Linen Clothing
 					</NavLink>
 				</li>
 				<li>
-					<NavLink activeClassName={"active-navlink"} to="/heights">
+					<NavLink activeClassName={"active-navlink"} to="/trending/heights">
 						In the Heights
 					</NavLink>
 				</li>
 				<li>
-					<NavLink activeClassName={"active-navlink"} to="/blank">
+					<NavLink activeClassName={"active-navlink"} to="/trending/blank">
 						Blank Staples: Wholesale
 					</NavLink>
 				</li>
@@ -147,27 +147,27 @@ const SideBarNav = (props) => {
 			<h2>Shop by Concept</h2>
 			<ul>
 				<li>
-					<NavLink activeClassName={"active-navlink"} to="/men">
+					<NavLink activeClassName={"active-navlink"} to="/concept/hm-men">
 						H&M Men
 					</NavLink>
 				</li>
 				<li>
-					<NavLink activeClassName={"active-navlink"} to="/modern">
+					<NavLink activeClassName={"active-navlink"} to="/concept/modern">
 						Modern Classic
 					</NavLink>
 				</li>
 				<li>
-					<NavLink activeClassName={"active-navlink"} to="/casual">
+					<NavLink activeClassName={"active-navlink"} to="/concept/casual">
 						Casual Wear
 					</NavLink>
 				</li>
 				<li>
-					<NavLink activeClassName={"active-navlink"} to="/divided">
+					<NavLink activeClassName={"active-navlink"} to="/product/divided">
 						Divided
 					</NavLink>
 				</li>
 				<li>
-					<NavLink activeClassName={"active-navlink"} to="/basics">
+					<NavLink activeClassName={"active-navlink"} to="/concept/basics">
 						Basics
 					</NavLink>
 				</li>
@@ -175,17 +175,17 @@ const SideBarNav = (props) => {
 			<h2>Sustainability</h2>
 			<ul>
 				<li>
-					<NavLink activeClassName={"active-navlink"} to="/conscious">
+					<NavLink activeClassName={"active-navlink"} to="/sustainability/conscious">
 						View Products
 					</NavLink>
 				</li>
 				<li>
-					<NavLink activeClassName={"active-navlink"} to="/care">
+					<NavLink activeClassName={"active-navlink"} to="/sustainability/care">
 						H&M Take Care
 					</NavLink>
 				</li>
 				<li>
-					<NavLink activeClassName={"active-navlink"} to="/learn">
+					<NavLink activeClassName={"active-navlink"} to="/sustainability/learn">
 						Learn More
 					</NavLink>
 				</li>

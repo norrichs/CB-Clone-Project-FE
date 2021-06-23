@@ -1,0 +1,53 @@
+@import './App.scss';
+//NOTE: all variables are being imported from App.scss
+
+#call-to-action-container3 {
+    // border: 2px solid red;
+    margin: 0 auto; 
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    background: $callCream;
+    width: $callWidth-desktop;
+    height: $callLargeHeight-desktop;
+    text-align: center;
+    margin-bottom: 10px;
+    & h2 {
+        // border: 2px solid red;
+        font-size: 1.8em;
+        font-weight: 500;
+        margin-bottom: 5px;
+        color: $callRed;
+    }    
+    & h2:nth-of-type(1) {
+        margin-top: 20px;
+    }
+      & p {
+        // border: 2px solid red; 
+        margin-top: 10px;  
+        font-size: .7em;
+    }
+
+}
+
+#call-to-action-button-container {
+    // border: 2px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 65px;
+}
+
+#call-to-action-button {
+    height: 35px;
+    width: 100px;
+    border-radius: 0px;
+    border: 1px solid black;
+    font-size: .7em;
+    font-weight: 500;
+    background: none;
+}
+#call-to-action-button:hover {
+    cursor: pointer;
+}

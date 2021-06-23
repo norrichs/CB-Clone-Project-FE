@@ -1,0 +1,53 @@
+@import './App.scss';
+
+
+.splash-card3-container {
+    // border: 2px solid red;
+    margin: 0 auto;
+    height: 650px;
+    // width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    text-align: center;
+
+.splash-card3-image img{
+    // border: 2px solid blue;
+    // height: 700px;
+    width: 1000px;
+    // overflow: hidden;
+    object-fit: cover;
+}
+
+.splash-card3-heading h2 {
+    // border: 2px solid red;
+    font-size: 2.3em;
+    font-weight: 600;
+    position: relative;
+    bottom: 180px;
+    color: white;
+} 
+& p {
+    font-size: .7em;
+    position: relative;
+    bottom: 160px;
+    color: white;
+}
+& .splash-card3-button button{
+    height: 35px;
+    width: 100px;
+    border-radius: 0px;
+    border: 1px solid black;
+    font-size: .7em;
+    font-weight: 500;
+    background: $mainWhite;
+    color: black;
+    position: relative;
+    bottom: 130px;
+}
+.splash-card3-button button:hover {
+    cursor: pointer;
+}
+
+}
