@@ -22,6 +22,7 @@ const SideBarNav = (props) => {
 										>
 											{category.label}
 										</NavLink>
+										{/* {if(category.groups.length)} */}
 										<ul>
 											{category.groups.map((group, i) => {
 												return (

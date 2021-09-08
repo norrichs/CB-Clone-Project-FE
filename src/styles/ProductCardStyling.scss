@@ -78,6 +78,16 @@ body {
         //  border: 2px solid red;
          width: 50%;
          margin-top: 5px;
+         display: flex;
+         flex-direction: row;
+         gap: 3px;
+
+        .swatch-circle{
+            width: 6px;
+            height: 6px;
+            border-radius: 3px;
+        }
+
         #card-circles-1 {
             font-size: 10px;
             color:lightgrey;

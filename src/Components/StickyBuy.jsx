@@ -3,10 +3,13 @@ import React from "react";
 // import { Link } from "react-router-dom";
 import "../styles/Detail.scss";
 import { MdFavorite } from "react-icons/md";
-import SelectSize from '../Components/SelectSize'
+import SelectSize from "../Components/SelectSize";
 
-const StickyBuy = ({ data, thumbs, sizes ,pDImgBaseURL}, props) => {
-	const [sizeSelectShown, setSizeSelectShown] = React.useState(null)
+const StickyBuy = (
+	{ data, thumbs, sizes, pDImgBaseURL, handleSelectItem, itemIndex },
+	props
+) => {
+	const [sizeSelectShown, setSizeSelectShown] = React.useState(null);
 	// console.log('sticky sizes', sizes)
 	// console.log("sticky buy data->", data);
 	const thumbBaseURL = "/images/";
@@ -14,24 +17,29 @@ const StickyBuy = ({ data, thumbs, sizes ,pDImgBaseURL}, props) => {
 	const thumbDisplay = thumbs.map((thumb, i) => {
 		// console.log(thumbBaseURL + thumb);
 		return (
-			<li key={i}>
-				<img alt="thumb" src={pDImgBaseURL + thumb} />
+			<li key={i} onClick={() => handleSelectItem(i)}>
+				<img
+					alt={thumb.title}
+					src={pDImgBaseURL + "thumbs/" + thumb.thumb}
+					class={`thumb ${itemIndex !== i || 'selected-thumb'}`}
+				/>
 			</li>
 		);
 	});
+
 	const handleSelectSizeShown = () => {
-		console.log('select status', sizeSelectShown)
-		if(sizeSelectShown){
-			console.log('setting false')
-			setSizeSelectShown(false)
-		}else{
-			console.log('setting true')
-			setSizeSelectShown(true)
+		console.log("select status", sizeSelectShown);
+		if (sizeSelectShown) {
+			console.log("setting false");
+			setSizeSelectShown(false);
+		} else {
+			console.log("setting true");
+			setSizeSelectShown(true);
 		}
-	}
-	React.useEffect(()=>{
-		setSizeSelectShown(false)
-	},[])
+	};
+	React.useEffect(() => {
+		setSizeSelectShown(false);
+	}, []);
 	return (
 		<div className="sticky-container">
 			<section className="sticky-buy">
@@ -44,24 +52,28 @@ const StickyBuy = ({ data, thumbs, sizes ,pDImgBaseURL}, props) => {
 				<form>
 					<h3>$ {data.price}</h3>
 					<label>Styles</label>
-						<div className="thumb-slider">
+					<div className="thumb-slider">
 						<ul>{thumbDisplay}</ul>
 					</div>
 					<div>
 						{/* <span>icon</span> */}
 						<span>Find in-store</span>
 					</div>
-					<div className="size-selector" onClick={handleSelectSizeShown}>
-						<span>Select size</span><span>{'\u2304'}</span>
-						{sizeSelectShown 
-							? (<SelectSize 
-								show={sizeSelectShown} 
-								sizes={sizes} 
+					<div
+						className="size-selector"
+						onClick={handleSelectSizeShown}
+					>
+						<span>Select size</span>
+						<span>{"\u2304"}</span>
+						{sizeSelectShown ? (
+							<SelectSize
+								show={sizeSelectShown}
+								sizes={sizes}
 								handleSelectSizeShown={handleSelectSizeShown}
-								/>) 
-							: null}
+							/>
+						) : null}
 					</div>
-					<input type="submit" className="add-button" value="Add"/>
+					<input type="submit" className="add-button" value="Add" />
 				</form>
 			</section>
 		</div>

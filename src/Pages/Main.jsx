@@ -10,7 +10,7 @@ import '../styles/Main.scss'
 const Main = ({ awsURL, imgBaseURL }, props) => {
 	// console.log('this is the props', props)
 	// console.log('awsurl', awsURL)
-	// console.log("these are the params", useParams());
+	console.log("these are the params", useParams());
 	// console.log('raw main params', useParams())
 	const { audience, category, group } = useParams();
 	console.log('Main.js params', audience, category, group)
@@ -20,7 +20,7 @@ const Main = ({ awsURL, imgBaseURL }, props) => {
 	
 	// console.log(awsURL + "/product/" + audience + "/" + category + "/" + group)
 	const getProductFamiliesForGroup = async () => {
-		// console.log('fetching: ' + awsURL + "/product/" + audience + "/" + category + "/" + group + "/")
+		console.log('fetching: ' + awsURL + "/product/" + audience + "/" + category + "/" + group)
 		fetch(awsURL + "/product/" + audience + "/" + category + "/" + group)
 			.then((res) => {
 				// console.log('get families response', res)
@@ -32,7 +32,15 @@ const Main = ({ awsURL, imgBaseURL }, props) => {
 					// console.log('setContentDisplay product family data: ', pFam)
 					return (<ProductCard 
 						key={i}
-						imgBaseURL={imgBaseURL} 
+						imgBaseURL={imgBaseURL}
+						swatches={
+							pFam.items.map((item,index)=>{
+								return {
+									color: item.color,
+									title: item.title,
+								}
+							})
+						}
 						pFam={{
 							a_c: pFam.a_c,
 							g_f: pFam.g_f,
@@ -41,8 +49,8 @@ const Main = ({ awsURL, imgBaseURL }, props) => {
 							group: pFam.group,
 							price: pFam.price,
 							price_sale: pFam.price_sale,
-							image0: pFam.images[0],
-							image1: pFam.images[1],
+							image0: pFam.detail_images[0],
+							image1: pFam.detail_images[1],
 							alt0: pFam.altText[0],
 							alt1: pFam.altText[1],
 							label: pFam.product_family

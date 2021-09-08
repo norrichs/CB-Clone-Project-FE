@@ -1,9 +1,9 @@
 import React from "react";
-import {Link} from 'react-router-dom';
+import {Link, Redirect} from 'react-router-dom';
 import { GiPlainCircle } from "react-icons/gi";
 import { MdFavorite } from "react-icons/md";
 
-const ProductCard = ({ pFam, imgBaseURL}) => {
+const ProductCard = ({ pFam, swatches, imgBaseURL}) => {
 	console.log("ProductCard product prop:", pFam)
     
 
@@ -21,6 +21,18 @@ const ProductCard = ({ pFam, imgBaseURL}) => {
         // alt0:       
         // alt1:        
         // label:      
+	
+	const swatchCircleDisplay = swatches.map((swatch, index) => {
+		return(
+			<Link to={`/detail/${pFam.a_c}/${pFam.g_f}`}>
+				<div 
+					className='swatch-circle' 
+					style={{backgroundColor: swatch.color}}
+				></div>
+			</Link>
+		)
+	})
+
 
 	React.useEffect(()=>{
 		setCardHidden(true)
@@ -45,7 +57,9 @@ const ProductCard = ({ pFam, imgBaseURL}) => {
 					<article>{pFam.label}</article>
 					<article>{pFam.price}</article>
 					<div id="card-circles-container">
-						<span id="card-circles-1">
+						{swatchCircleDisplay}
+
+						{/* <span id="card-circles-1">
 							<GiPlainCircle />
 						</span>
 						<span id="card-circles-2">
@@ -53,7 +67,7 @@ const ProductCard = ({ pFam, imgBaseURL}) => {
 						</span>
 						<span id="card-circles-3">
 							<GiPlainCircle />
-						</span>
+						</span> */}
 					</div>
 				</div>
 				<div id="card-favorite-white">

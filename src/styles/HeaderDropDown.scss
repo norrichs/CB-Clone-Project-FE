@@ -2,68 +2,70 @@
 
 $navbarindent: 10px;
 
-// *{
-// 	box-sizing: border-box;
-// 	// border: 1px solid grey !important;
-// }
+*{
+	box-sizing: border-box;
+	// border: 1px solid grey !important;
+}
 
 
 .header-nav {
     // border: 2px solid red;
     background: white;
-    // background: aquamarine;
     margin: 0 auto;
     display: flex;
     justify-content: center;
+    width: 100vw;
     // height: 500px;
     position: absolute;
+    top: 0;
     left: 0;
     right: 0;
-    z-index: -1;
+    z-index: -100;
     border-bottom: 5px solid black;
+    overflow: hidden;
     // transform: translateY(-195px)
+    .category-column {
+        // border: 2px solid green;
+        // width: 250px;
+        padding: 30px 0 0 15px;
+        display: flex;
+        flex-direction: column;
+    }
+    .header-group {
+        // border: 2px solid blue;
+        width: 250px;
+    }
+    h2 {
+       // border: 2px solid red;
+       color: black;
+       font-weight: 500;
+       font-size: .8em;
+       margin-bottom: 10px;
+    }
+    a {
+        // border: 2px solid blue;
+        // color: hotpink;
+        font-weight: 300;
+        font-size: .75em;
+        margin: 5px 0 5px 0;
+        // margin-bottom: 60px;
+    } 
+    // a:hover {
+    //     text-decoration: underline;
+    // }
+
 }
-
-
-.category-column {
-    // border: 2px solid green;
-    // width: 250px;
-    padding: 30px 0 0 15px;
-}
-
-.header-group {
-    // border: 2px solid blue;
-    width: 250px;
-}
-
-.header-nav h2 {
-    // border: 2px solid red;
-    color: black;
-    font-weight: 500;
-    font-size: .8em;
-	margin-bottom: 10px;
-}
-
-.header-nav a {
-    // border: 2px solid blue;
-    // color: hotpink;
-    font-weight: 300;
-    font-size: .75em;
-    margin: 5px 0 5px 0;
-    // margin-bottom: 60px;
-} 
-// .header-nav a:hover {
-//     text-decoration: underline;
-// }
 
 // This is for the hidden drop down menu. Currently hidden
 .hidden {
-    transform: translateY(-230px)
+    border: 0;
+    height: 0px;
+    transition: 200ms;
 }
 
 .shown {
-    z-index: 1;
-    transform: translateY(155px)
+    border-bottom: 10px;
+    transition: 200ms;
 }
 
 
