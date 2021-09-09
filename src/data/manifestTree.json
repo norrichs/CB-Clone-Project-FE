@@ -1,5 +1,36 @@
 [
 	{
+		"audience": "hmhome",
+		"label": "B&C HOME",
+		"categories": [
+			{
+				"category": "none",
+				"label": "Nothing here from B&C HOME"
+			}
+		]
+	},
+	{
+		"audience": "sale",
+		"label": "Sale",
+		"categories": [
+			{
+				"category": "none",
+				"label": "Nothing here on sale!"
+			}
+		]
+	},
+	{
+		"audience": "sustainability",
+		"label": "Sustainability",
+		"categories": [
+			{
+				"category": "none",
+				"label": "Nothing here from Sustainability"
+			}
+		]
+	},
+
+	{
 		"audience": "women",
 		"link": "/en_us/women.html",
 		"label": "Women",
@@ -1709,7 +1740,7 @@
 				"label": "Sleepwear & Loungewear",
 				"groups": [
 					{
-						"group": "pajamas",
+						"group": "pyjamas",
 						"link": "/en_us/men/products/nightwear-loungewear/pajamas.html",
 						"label": "Pajamas",
 						"families": []

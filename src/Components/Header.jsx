@@ -1,5 +1,5 @@
 import React from "react";
-import { css } from "@emotion/css";
+// import { css } from "@emotion/css";	
 import { NavLink, Link } from "react-router-dom";
 import "../styles/Header.scss";
 import { BsSearch } from "react-icons/bs";
@@ -8,16 +8,18 @@ import { RiUser3Line } from "react-icons/ri";
 import { HiOutlineShoppingBag } from "react-icons/hi";
 import { BiCircle } from "react-icons/bi";
 import { useState } from "react";
-import HeaderDropDown from "./HeaderDropDown";
-import { useRef } from "react";
+import HeaderDropDown from "./HeaderDropDown.jsx";
+// import { useRef } from "react";
 
 const Header = () => {
 	// THIS IS ME TESTING / TRYING TO GET DROPDOWN TO HIDE/SHOW
 	const [showClass, setShowClass] = useState("hidden");
 	const [headerNavAudience, setHeaderNavAudience] = useState("women");
+	
 
-	const handleShowMenu = () => {
-		console.log("show");
+	const handleShowMenu = (audience) => {
+		console.log("show - ", audience);
+		setHeaderNavAudience(audience)
 		setShowClass("shown");
 	};
 
@@ -87,58 +89,62 @@ const Header = () => {
 					</li>
 				</ul>
 			</nav>
-			<nav className="middle-nav"
-				onMouseEnter={handleShowMenu}
+			<nav
+				className="middle-nav"
+				
 				onMouseLeave={handleHideMenu}
-                onClick={handleHideMenu}
+				onClick={handleHideMenu}
 			>
 				<ul>
-					<li>
+					<li onMouseEnter={()=>handleShowMenu('women')}>
 						<NavLink to="/product/women">Women</NavLink>
 					</li>
-					<li>
+					<li onMouseEnter={()=>handleShowMenu('divided')}>
 						<NavLink to="/product/divided">Divided</NavLink>
 					</li>
-					<li>
+					<li onMouseEnter={()=>handleShowMenu('men')}>
 						<NavLink to="/product/men">Men</NavLink>
 					</li>
-					<li>
+					<li onMouseEnter={()=>handleShowMenu('baby')}>
 						<NavLink to="/product/baby">Baby</NavLink>
 					</li>
-					<li>
+					<li onMouseEnter={()=>handleShowMenu('kids')}>
 						<NavLink to="/product/kids">Kids</NavLink>
 					</li>
-					<li>
+					<li onMouseEnter={()=>handleShowMenu('hmhome')}>
 						<NavLink to="/product/hmhome">H&M HOME</NavLink>
 					</li>
-					<li>
+					<li onMouseEnter={()=>handleShowMenu('sale')}>
 						<NavLink to="/fake/:sale">Sale</NavLink>
 					</li>
-					<li>
+					<li onMouseEnter={()=>handleShowMenu('sustainability')}>
 						<NavLink to="/fake/:sustainability">
 							Sustainability
 						</NavLink>
 					</li>
 				</ul>
 			</nav>
-			<div id="header-dropdown-wrapper"
-				onMouseEnter={handleShowMenu}
+			<div
+				id="header-dropdown-wrapper"
 				onMouseLeave={handleHideMenu}
-                onClick={handleHideMenu}
+
+				onMouseEnter={()=>handleShowMenu(headerNavAudience)}
+				onClick={handleHideMenu}
 			>
-				<HeaderDropDown showClass={showClass}				onMouseEnter={handleShowMenu}
-				    onMouseLeave={handleHideMenu}
-                />
+				<HeaderDropDown
+					audience={headerNavAudience}
+					showClass={showClass}
+					onMouseEnter={()=>handleShowMenu(headerNavAudience)}
+					onMouseLeave={handleHideMenu}
+				/>
 			</div>
-			<div className="search">
+			<span className="search">
 				<span>
 					<BsSearch />
 				</span>
 				{/* <u>Search products<u> */}
-				<p>
-					<u>Search products</u>
-				</p>
-			</div>
+				<input type="search" placeholder="Search products" />
+			</span>
 			<section className="header-center"></section>
 			<section className="header-right"></section>
 		</header>

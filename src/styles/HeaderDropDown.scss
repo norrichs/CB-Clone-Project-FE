@@ -9,7 +9,6 @@ $navbarindent: 10px;
 
 
 .header-nav {
-    // border: 2px solid red;
     background: white;
     margin: 0 auto;
     display: flex;
@@ -21,8 +20,9 @@ $navbarindent: 10px;
     left: 0;
     right: 0;
     z-index: -100;
-    border-bottom: 5px solid black;
     overflow: hidden;
+    border-bottom: 5px solid black;
+    transform-origin: top;
     // transform: translateY(-195px)
     .category-column {
         // border: 2px solid green;
@@ -58,13 +58,16 @@ $navbarindent: 10px;
 
 // This is for the hidden drop down menu. Currently hidden
 .hidden {
-    border: 0;
-    height: 0px;
+    // border: 0;
+    // height: 0px;
+    transform: scaleY(0);
     transition: 200ms;
 }
 
 .shown {
-    border-bottom: 10px;
+
+    // height: 500px;
+    transform: scaleY(1);
     transition: 200ms;
 }
 

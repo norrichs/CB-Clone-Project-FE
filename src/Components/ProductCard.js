@@ -12,8 +12,8 @@ const ProductCard = ({ pFam, swatches, imgBaseURL}) => {
     // * pFam object contents   //
     //////////////////////////////
         // audience:    
-        // category:   
-        // group:       
+        // product_category:   
+        // product_group:       
         // price:       
         // price_sale:  
         // image0:     
