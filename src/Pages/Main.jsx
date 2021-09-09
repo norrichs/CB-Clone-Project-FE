@@ -105,6 +105,8 @@ const Main = ({ awsURL, imgBaseURL }, props) => {
 									};
 								})}
 								pFam={{
+									a_c: pFam.a_c,
+									g_f: pFam.g_f,
 									audience: pFam.audience,
 									category: pFam.product_category,
 									group: pFam.product_group,
