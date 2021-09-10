@@ -9,12 +9,10 @@ $navbarindent: 10px;
 
 
 .header-nav {
-    background: white;
+    background: white;  
     margin: 0 auto;
     display: flex;
     justify-content: center;
-    width: 100vw;
-    // height: 500px;
     position: absolute;
     top: 0;
     left: 0;
@@ -23,6 +21,7 @@ $navbarindent: 10px;
     overflow: hidden;
     border-bottom: 5px solid black;
     transform-origin: top;
+    padding-bottom: 10px;
     // transform: translateY(-195px)
     .category-column {
         // border: 2px solid green;

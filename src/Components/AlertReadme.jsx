@@ -7,16 +7,16 @@ const AlertReadme = () => {
 
 	return (
 		<div className="alert-wrapper">
-			<aside class={`alert-readme ${displayState}`}>
+			<aside className={`alert-readme ${displayState}`}>
 				<div
-					class="alert-closed-content"
+					className="alert-closed-content"
 					onClick={() => {setDisplayeState('open')}}
 				>
 					Read Me
 				</div>
-				<div class="alert-open-content">
+				<div className="alert-open-content">
 					<div
-						class="close-button"
+						className="close-button"
 						onClick={() => {setDisplayeState('closed')}}
 					>
 						X

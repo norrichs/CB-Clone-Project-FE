@@ -8,8 +8,6 @@
 	top: 55px;
 }
 header *{
-	box-sizing: border-box;
-	// border: 1px solid magenta !important;	
 	$bottom-whitespace: 20px;
 }
 header.header-main-top{
@@ -112,6 +110,7 @@ header.header-main-top{
 		justify-content: space-between;
 		align-items: flex-end;
 		padding-bottom: $header-bottom-whitespace;	
+		border-bottom: 1px solid black;
 
 	}
 	.search span {
@@ -123,6 +122,7 @@ header.header-main-top{
 	.search input {
 		border: 0;
 		font-size: .9em;
+		width: 125px;
 	}
 	.search input::placeholder{
 		color: black;
@@ -132,7 +132,7 @@ header.header-main-top{
 	}
 	#header-dropdown-wrapper{
 		height: 0;
-		width: 100%;
+		// width: 75%;
 		background-color: royalblue;
 		grid-row: 3 / 4;
 		grid-column: 1 / 6;
