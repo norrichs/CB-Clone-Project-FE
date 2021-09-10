@@ -1,6 +1,5 @@
 import React from "react";
-import {Link, Redirect} from 'react-router-dom';
-import { GiPlainCircle } from "react-icons/gi";
+import {Link} from 'react-router-dom';
 import { MdFavorite } from "react-icons/md";
 
 const ProductCard = ({ pFam, swatches, imgBaseURL}) => {

@@ -6,7 +6,6 @@ import { Route, Switch } from "react-router-dom";
 
 /////////////// COMPONENTS BELOW /////////////////////
 import Header from "./Components/Header.jsx";
-// import ExpandableHeader from "./Components/ExpandableHeader.jsx";
 import BottomNav from "./Components/BottomNav.jsx";
 
 /////////////// PAGES BELOW /////////////////////
@@ -15,6 +14,7 @@ import Splash from "./Pages/Splash.jsx";
 import Bag from "./Pages/Bag.jsx";
 import Favorites from "./Pages/Favorites.jsx";
 import Detail from "./Pages/Detail.jsx";
+import ReadMe from "./Pages/ReadMe.jsx"
 // import { HiTranslate } from "react-icons/hi";
 
 function App() {
@@ -25,10 +25,11 @@ function App() {
 		return (
 			<div className="App">
 			<Header/>
-			{/* <HeaderDropDown isShown={isShown}/>
-			<ExpandableHeader /> */}
 			<Switch>
 				{/* may not need the routerProps in the the render prop */}
+				<Route path="/ReadMe">
+					<ReadMe />
+				</Route>
 				<Route exact path="/">
 					<Splash awsURL={awsURL} imgBaseURL={imgBaseURL}/>
 				</Route>

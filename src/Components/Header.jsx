@@ -9,6 +9,7 @@ import { HiOutlineShoppingBag } from "react-icons/hi";
 import { BiCircle } from "react-icons/bi";
 import { useState } from "react";
 import HeaderDropDown from "./HeaderDropDown.jsx";
+import AlertReadme from './AlertReadme.jsx'
 // import { useRef } from "react";
 
 const Header = () => {
@@ -30,6 +31,7 @@ const Header = () => {
 
 	return (
 		<header className="header-main-top">
+			<AlertReadme/>
 			<nav className="top-left">
 				<ul>
 					<li>

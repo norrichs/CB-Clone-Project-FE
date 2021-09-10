@@ -129,6 +129,7 @@ const Main = ({ awsURL, imgBaseURL }, props) => {
 		group === undefined
 			? getProductFamiliesForCategory()
 			: getProductFamiliesForGroup();
+			// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [location]);
 	return (
 		<main id={"main-container"}>

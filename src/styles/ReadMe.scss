@@ -1,0 +1,28 @@
+section.readme-copy{
+	// height: 80vh;
+	max-width: 800px;
+	box-shadow: 0 0 10px 0 black;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 30px;
+	margin: 50px auto;
+	padding: 25px 25px 25px 100px;
+	
+	border-radius: 10px;
+	place-self: center;
+	h2{
+		font-size: 2em
+	}
+	h3{
+		font-size: 1.5em
+	}
+	a{
+		text-decoration: underline;
+	}
+	li{
+		list-style-type: disc;
+		margin-bottom: 10px;
+	}
+}

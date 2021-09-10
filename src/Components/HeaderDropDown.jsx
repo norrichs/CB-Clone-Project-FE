@@ -1,15 +1,11 @@
 import React from "react";
-import { NavLink, useParams } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "../styles/HeaderDropDown.scss";
 
 const tree = require("../data/manifestTree.json");
 
 const HeaderDropDown = ({ showClass, handleHideMenu, audience }, props) => {
 	// console.log('sidebar nav data',tree )
-	const params = useParams();
-	// TODO Make audience-nav dynamic
-	// TODO Keep visible when mouse not over audience link
-
 	const navData = {};
 	tree.forEach((audienceObj) => {
 		navData[audienceObj.audience] = audienceObj.categories.map(

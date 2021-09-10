@@ -106,13 +106,14 @@ const Detail = ({ awsURL, pDImgBaseURL }, props) => {
 	const pDDisplay = pDImages.map((image, i) => {
 		return (
 			<div key={i} className={`pd${i + 1} image-container`}>
-				<img src={`${pDImgBaseURL}details/${image}`} />
+				<img src={`${pDImgBaseURL}details/${image}`} alt={`${data.product_family} - ${i}`} />
 			</div>
 		);
 	});
 
 	React.useEffect(() => {
 		getProductFamily();
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 	// console.log("sizes array",sizeList)
 	// console.log('thumb array', thumbs)

@@ -47,7 +47,10 @@ const TrendingSlider = () => {
     }
         
     
-    useEffect( () => {setRandomImage(getRandomImage())},[])
+    useEffect( () => {
+        setRandomImage(getRandomImage())
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[])
 
     return (
         <div className="trending-container-heading">

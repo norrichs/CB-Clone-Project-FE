@@ -1,6 +1,4 @@
 import React from "react";
-// import ThumbSlider from "./ThumbSlider";
-// import { Link } from "react-router-dom";
 import "../styles/Detail.scss";
 import { MdFavorite } from "react-icons/md";
 import SelectSize from "../Components/SelectSize";
@@ -10,12 +8,8 @@ const StickyBuy = (
 	props
 ) => {
 	const [sizeSelectShown, setSizeSelectShown] = React.useState(null);
-	// console.log('sticky sizes', sizes)
-	// console.log("sticky buy data->", data);
-	const thumbBaseURL = "/images/";
 
 	const thumbDisplay = thumbs.map((thumb, i) => {
-		// console.log(thumbBaseURL + thumb);
 		return (
 			<li key={i} onClick={() => handleSelectItem(i)}>
 				<img
